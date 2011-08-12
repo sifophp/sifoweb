@@ -5,7 +5,7 @@ include ROOT_PATH . '/instances/sifoweb/external/PHP_Markdown_Extra_1.2.4/markdo
 class StaticMarkdownSifowebController extends Controller
 {
 
-	const DOCS_LIST_CACHE_KEY = 'list_of_Markdown_docs';
+	const DOCS_LIST_CACHE_KEY = 'list_of_Markdown_Docs';
 
 	public function build()
 	{
@@ -15,19 +15,15 @@ class StaticMarkdownSifowebController extends Controller
 
 		$docs_list = $this->getDocsList();
 		$this->assign( 'docs', $docs_list );
-		
+
 		if ( in_array( $path, $docs_list ) )
 		{
 			$markdown_content = file_get_contents( ROOT_PATH . '/instances/sifoweb/docs/' . $path . '.md' );
 
-			if ( $markdown_content )
-			{
-
-				$this->addModule( 'header', 'SharedHeader' );
-				$this->addModule( 'head', 'SharedHead' );
-				$this->addModule( 'footer', 'SharedFooter' );
-				$this->assign( 'content', Markdown( $markdown_content ) );
-			}
+			$this->addModule( 'header', 'SharedHeader' );
+			$this->addModule( 'head', 'SharedHead' );
+			$this->addModule( 'footer', 'SharedFooter' );
+			$this->assign( 'content', Markdown( $markdown_content ) );
 		}
 		else
 		{
