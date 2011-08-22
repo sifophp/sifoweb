@@ -1,40 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//{$url.lang|upper}"
-				"http://www.w3.org/TR/html4/strict.dtd">
-<html lang="{$url.lang}">
-<head>
-	{$modules.head}
-</head>
-<body>
-<div id="wrap">
-	<div id="header">
-{	block name='header'}
-{		$modules.header}
-{	/block}
-	</div>
-	<div id="nav">
-		<ul>
-			<li><a href="./">Home</a></li>
-			<li><a href="./">Docs</a></li>
-		</ul>
-
-	</div>
-	<div id="main">
-		{block name='body'}
-		{$content}
-		{/block}
-	</div>
-	<div id="sidebar">
-		<h2>Documentation</h2>
-		<p>Explore the documentation</p>
-		<ul>
-{			foreach from=$docs item=d}
-			<li><a href="{$url.base}/{$d}">{$d}</a></li>
-{			/foreach}
-		</ul>
-	</div>
-	<div id="footer">
-		{$modules.footer}
-	</div>
-</div>
-</body>
-</html>
+{extends file=$_tpls['layout/basic.tpl']}
+{block name='content'}
+		<section id="{$section}">
+			<div class="row"> 
+				<div class="span11 columns"> 
+				 
+					{$content}
+				</div>
+				<div class="span5 columns"> 
+					<h2>Documentation</h2>
+					<p>Explore the documentation</p>
+					<ul>
+{					foreach from=$docs item=d}
+						<li><a href="{$url.base}/{$d}">
+								{if $section==$d}<strong>{$d|ucfirst}</strong>{else}{$d|ucfirst}{/if}
+							</a></li>
+{					/foreach}
+					</ul>
+				</div>
+			  </div><!-- /row -->
+		  </section>
+{/block}

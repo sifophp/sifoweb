@@ -29,7 +29,7 @@
 $config['__NO_ROUTE_FOUND__'] = 'static/markdown';
 
 // Controller used when no path is passed (home page).
-$config['__HOME__'] = 'static/markdown';
+$config['__HOME__'] = 'home/index';
 
 // Rebuild/regenerate the configuration files:
 $config['rebuild'] = 'manager/rebuild';

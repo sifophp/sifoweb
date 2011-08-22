@@ -23,6 +23,7 @@ $config['classes_always_preloaded'] = array(
 	'I18N',
 	'Benchmark',
 	'Cache',
+	'SharedFirstlevelController'
 );
 
 // Contains all the libraries available.

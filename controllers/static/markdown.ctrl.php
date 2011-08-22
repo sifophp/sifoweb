@@ -2,16 +2,16 @@
 
 include ROOT_PATH . '/instances/sifoweb/external/PHP_Markdown_Extra_1.2.4/markdown.php';
 
-class StaticMarkdownSifowebController extends Controller
+class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 {
 
 	const DOCS_LIST_CACHE_KEY = 'list_of_Markdown_Docs';
 
-	public function build()
+	public function buildChild()
 	{
 		$this->setLayout( 'static/docs.tpl' );
 		$params = $this->getParams();
-		$path = ( empty( $params['path'] ) ? 'index' : $params['path'] );
+		$path =  $params['path'];
 
 		$docs_list = $this->getDocsList();
 		$this->assign( 'docs', $docs_list );
@@ -20,9 +20,7 @@ class StaticMarkdownSifowebController extends Controller
 		{
 			$markdown_content = file_get_contents( ROOT_PATH . '/instances/sifoweb/docs/' . $path . '.md' );
 
-			$this->addModule( 'header', 'SharedHeader' );
-			$this->addModule( 'head', 'SharedHead' );
-			$this->addModule( 'footer', 'SharedFooter' );
+			$this->assign( 'section', $path );
 			$this->assign( 'content', Markdown( $markdown_content ) );
 		}
 		else
@@ -37,7 +35,7 @@ class StaticMarkdownSifowebController extends Controller
 		$cache = Cache::getInstance();
 		$paths = $cache->get( self::DOCS_LIST_CACHE_KEY );
 
-		if ( false === $paths )
+		if ( false === $paths || $this->hasDebug() )
 		{
 			$dir = $this->getClass( 'Dir' );
 			$files = $dir->getFileListRecursive( ROOT_PATH . '/instances/sifoweb/docs' );
