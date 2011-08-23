@@ -220,7 +220,7 @@ This code would produce a different output depending on the current active langu
 						a "parent" project?</p>
 						<p>Project inheritance allows you to create several projects (we call it <em>instances</em>) based on a
 						previous one. Be configuration, templates, controllers, models or other libraries. Create an instance
-						that inherits from another one and just overwritte/extend/limit the desired functionality</p>
+						that inherits from another one and just overwrite/extend/limit the desired functionality</p>
 					</div>
 					<div class="span5 columns">
 						<img class="nomargin" src="{$url.static}/docs/tree.png" />
