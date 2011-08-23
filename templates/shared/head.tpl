@@ -15,6 +15,7 @@
 	<link href="{$url.static}/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript" src="{$url.static}/js/google-code-prettify/prettify.js"></script>
 
+	{literal}
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -28,4 +29,5 @@
 	  })();
 
 	</script>
+	{/literal}
 </head>
