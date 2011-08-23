@@ -1,12 +1,12 @@
 <?php
 $config["default"] = array(
-	"title" => "Successful instalation of SEOframework",
-	"description" => "The installation of SEOframework was correct",
-	"keywords" => "SEOframework,SEO,framework,php,easy"
+	"title" => "SIFO, the flexible PHP5 framework for real-world web applications",
+	"description" => "SIFO glues Memcached, Redis, Sphinx, Mysql and other RDBMS inside a Model-View-Controller context.",
+	"keywords" => "php, framework, sifo, seoframework"
 );
 
 $config["home"] = array(
-	"title" => "Successful instalation of SEOframework",
-	"description" => "The installation of SEOframework was correct",
-	"keywords" => "SEOframework,SEO,framework,php,easy"
+	"title" => "SIFO, the flexible PHP5 framework for real-world web applications",
+	"description" => "SIFO glues Memcached, Redis, Sphinx, Mysql and other RDBMS inside a Model-View-Controller context.",
+	"keywords" => "php, framework, sifo, seoframework"
 );

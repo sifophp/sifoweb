@@ -11,11 +11,9 @@
 	{	/block}
 	</div>
 
-	<div class="container">{* Use container-fluid class for non-fixed layout*}
-		{block name='content'}
-		{/block}
-	</div>
-
+	{block name='content'}
+	{/block}
+	
 	<div id="footer">
 		{$modules.footer}
 	</div>

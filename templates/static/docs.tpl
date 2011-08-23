@@ -1,4 +1,5 @@
 {extends file=$_tpls['layout/basic.tpl']}
+<div class="container">{* Use container-fluid class for non-fixed layout*}
 {block name='content'}
 		<section id="{$section}">
 			<div class="row"> 
@@ -20,3 +21,4 @@
 			  </div><!-- /row -->
 		  </section>
 {/block}
+</div> {* EOF .container *}
