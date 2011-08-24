@@ -27,11 +27,12 @@
 					<p>SIFO is free and very easy to use. Contains a lot of libraries and classes that
 						allow you to get your projects running in a breeze.</p>
 
-					<p>Checkout from the official SVN repository at Google Code or clone, pull, fork... from the Github mirror.</p>
-					<p><a target="_blank" href="http://code.google.com/p/sifo/" class="btn primary">SIFO on Google Code »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">SIFO on GitHub »</a></p>
-					<p>Quick checkout:</p>
+					<p>Download, checkout from the official SVN repository at Google Code or clone, pull, fork... from the Github mirror.</p>
+					<p><a target="_blank" href="http://code.google.com/p/sifo/downloads/list" class="btn primary">Download package »</a> or <a target="_blank" href="http://code.google.com/p/sifo/" class="btn primary">SVN Checkout »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a></p>
+					<p>Quick checkout (latest development version):</p>
 					<form>
 						<textarea rows="1">svn checkout http://sifo.googlecode.com/svn/trunk/ sifo</textarea>
+						
 					</form>
 
 				</div>
