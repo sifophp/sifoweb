@@ -11,6 +11,7 @@ $config['Cookie'] = 'Cookie::libs/SEOframework/Cookie.php';
 $config['Crypt'] = 'Crypt::libs/SEOframework/Crypt.php';
 $config['Database'] = 'Database::libs/SEOframework/Database.php';
 $config['Dir'] = 'Dir::libs/SEOframework/Dir.php';
+$config['DirectoryList'] = 'DirectoryList::libs/SEOframework/DirectoryList.php';
 $config['Domains'] = 'Domains::libs/SEOframework/Domains.php';
 $config['Exceptions'] = 'Exceptions::libs/SEOframework/Exceptions.php';
 $config['Filter'] = 'Filter::libs/SEOframework/Filter.php';

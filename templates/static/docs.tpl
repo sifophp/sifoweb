@@ -1,15 +1,19 @@
 {extends file=$_tpls['layout/basic.tpl']}
-<div class="container">{* Use container-fluid class for non-fixed layout*}
+
 {block name='content'}
+<div class="container">{* Use container-fluid class for non-fixed layout*}
 		<section id="{$section}">
 			<div class="row"> 
 				<div class="span11 columns"> 
-				 
-					{$content}
+{					if isset($content)}{$content}{/if}
+{					if isset($is_dir)}
+					<h1>{$path}</h1>
+{					/if}
 				</div>
 				<div class="span5 columns"> 
 					<h2>Documentation</h2>
 					<p>Explore the documentation</p>
+					<nav>
 					<ul>
 {					foreach from=$docs item=d}
 						<li><a href="{$url.base}/{$d}">
@@ -17,8 +21,9 @@
 							</a></li>
 {					/foreach}
 					</ul>
+					</nav>
 				</div>
 			  </div><!-- /row -->
 		  </section>
-{/block}
 </div> {* EOF .container *}
+{/block}
