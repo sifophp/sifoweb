@@ -6,37 +6,49 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 {
 
 	const DOCS_LIST_CACHE_KEY = 'list_of_markdown_docs_and_folders__';
-	
+
 	protected $docs_path = '/instances/sifoweb/docs/';
 
 	public function buildChild()
 	{
 		$this->setLayout( 'static/docs.tpl' );
 		$params = $this->getParams();
-		$path =  $params['path'];
-		$docs_list = $this->getDocsList( $path );
-		
+		$path = $params['path'];
+		$valid_paths = $this->getPossiblePaths( $path );
+
 
 		// Is a valid path
-		if ( in_array( $path, $docs_list ) )
+		if ( in_array( $path, $valid_paths ) )
 		{
 			$file = ROOT_PATH . $this->docs_path . $path;
-			
+
 			// Show dir contents instead of markdown:
-			if ( !is_dir( $file ) )
+
+			if ( is_dir( $file ) )
 			{
-				$file .= '.md';
-				$markdown_content = file_get_contents( $file );
-				$content = Markdown( $markdown_content );
-				$this->assign( 'content', $content );
+				$file .= '/index';
 			}
-			else
+
+			$markdown_content = file_get_contents( $file . '.md' );
+			$content = Markdown( $markdown_content );
+			
+			$has_title = preg_match( '#<h1>(.*)</h1>#', $content, $matches );
+			if ( $has_title )
 			{
-				$this->assign( 'is_dir', true );
+				$this->getClass( 'Metadata', false );
+				Metadata::setKey( 'markdown_docs' );
+				Metadata::setValues( 'title', $matches[1] );
 			}
-				
+			
+			$this->assign( 'content', $content );
+
+
+			$dir = $this->getClass( 'DirectoryList' );
+			// Get only immediate items, not the whole tree:
+			$docs = $dir->getList( dirname( $file ), array( 'md' ) );
+
 			$this->assign( 'section', $path );
-			$this->assign( 'docs', $docs_list );
+			$this->assign( 'docs', $this->_formatFilesForMenu( $docs ) );
 			$this->assign( 'path', $path );
 		}
 		else
@@ -46,35 +58,49 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 
 	}
 
-	protected function getDocsList()
+	protected function getPossiblePaths()
 	{
 		$cache = Cache::getInstance();
 		$paths = $cache->get( self::DOCS_LIST_CACHE_KEY );
 
-			
+
 		if ( false === $paths || $this->hasDebug() )
 		{
 			$parse_folder = ROOT_PATH . '/instances/sifoweb/docs';
 			$dir = $this->getClass( 'DirectoryList' );
 			$files = $dir->getRecursiveList( $parse_folder, true, array( 'md' ) );
-			
-			$paths = array( );
-			foreach ( $files as $path => $file )
-			{
-				// Leave the relative path after $parse_folder and remove extension:
-				if ( $file->isDir() )
-				{
-					$paths[] = str_replace( ROOT_PATH . $this->docs_path, '', $path );
-				}
-				else
-				{
-					$paths[] = substr( str_replace( ROOT_PATH . $this->docs_path, '', $path ), 0, -3 );
-				}
-			}
+			$paths = $this->_formatFilesForMenu( $files );
+
 			// Store full dir scan for 5 minutes.
 			$cache->set( self::DOCS_LIST_CACHE_KEY, $paths, 300 );
 		}
 
+		return $paths;
+
+	}
+
+	private function _formatFilesForMenu( Iterator $files )
+	{
+		$paths = array( );
+		foreach ( $files as $path => $file )
+		{
+			$relative_path = str_replace( ROOT_PATH . $this->docs_path, '', $path );
+
+			// Leave the relative path after $parse_folder and remove extension:
+			if ( $file->isDir() )
+			{
+				$paths[] = $relative_path;
+			}
+			else
+			{
+				// Ignore index.md files, this is the content mapped with the folder:
+				if ( !preg_match( '/index\.md$/', $relative_path ) )
+				{
+					$paths[] = substr( str_replace( ROOT_PATH . $this->docs_path, '', $path ), 0, -3 );
+				}
+			}
+		}
+		
 		return $paths;
 
 	}

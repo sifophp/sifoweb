@@ -1,4 +1,6 @@
 section { padding-top: 60px; }
+pre code { background-color: black; color: #FFF; } /* Prettify code blocks are overriden by Bootstrap, correct */
+
 #footer p.right {
 	float: right;
 }
@@ -54,11 +56,31 @@ section { padding-top: 60px; }
 }
 
 #quickstart textarea { width: 100%; }
+.teaser p { line-height: 30px; font-size: 18px; }
 
 #overview {  }
-	#overview h1 {  background-color: #DDD; padding: 20px; margin: auto; color: #444}
+	#overview h1 {  background-color: #CDF; padding: 20px; margin: auto; color: #444;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		-o-border-radius: 8px;
+		-ms-border-radius: 8px;
+		-khtml-border-radius: 8px;
+		border-radius: 8px;	  
+	}
 	#overview .row { margin-top: 60px; }
 	#overview img { margin-top: 40px }
 	#overview img.nomargin { margin-top:0;}
 	#overview .float.right { float: right; }
 	#overview .float.left { float: left; }
+
+#documentation h1 { border-bottom: 1px solid #DDD; }
+#documentation h2 { color:#190; }
+
+#navigation_box { background-color: #CDF; padding: 20px; margin: auto; color: #444;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	}

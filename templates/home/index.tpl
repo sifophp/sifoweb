@@ -3,10 +3,10 @@
 <div id="masthead">
 	<div class="inner">
         <div class="container">
-			<h1>SIFO, framework for PHP</h1>
+			<h1>Framework for PHP</h1>
 			<p class="lead">
 				SIFO is a flexible PHP5 framework for real-world web applications.<br />
-				Glues Memcached, Redis, Sphinx, Mysql and other RDBMS inside a Model-View-Controller context.
+				Daily use classes, Memcached, Redis, Sphinx, Mysql and other RDBMS inside a Model-View-Controller context.
 			</p>
         </div> <!-- /container -->
 	</div>
@@ -21,12 +21,13 @@
 				</div>
 				<div class="span11 columns">
 
-					<p><a href="http://sifo.me">SIFO</a> is a well-proben open source PHP5 framework currently running on several
-						sites, from small installations to large websites with multiple servers.</p>
+					<div class="teaser well">
+						<p><a href="http://sifo.me">SIFO</a> is a well-proben open source PHP5 framework currently running on several
+							sites, from small installations to large websites with multiple servers.</p>
 
-					<p>SIFO is free and very easy to use. Contains a lot of libraries and classes that
-						allow you to get your projects running in a breeze.</p>
-
+						<p>SIFO is free and very easy to use. Contains a lot of <strong>libraries and classes</strong> that resolve your
+							<strong>basic problems</strong> and allow you to focus in your bussiness logic, at a very low learning curve.</p>
+					</div>
 					<p>Download, checkout from the official SVN repository at Google Code or clone, pull, fork... from the Github mirror.</p>
 					<p><a target="_blank" href="http://code.google.com/p/sifo/downloads/list" class="btn primary">Download package »</a> or <a target="_blank" href="http://code.google.com/p/sifo/" class="btn primary">SVN Checkout »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a></p>
 					<p>Quick checkout (latest development version):</p>
