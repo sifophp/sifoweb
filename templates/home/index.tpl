@@ -29,7 +29,7 @@
 							<strong>basic problems</strong> and allow you to focus in your bussiness logic, at a very low learning curve.</p>
 					</div>
 					<p>Download, checkout from the official SVN repository at Google Code or clone, pull, fork... from the Github mirror.</p>
-					<p><a target="_blank" href="http://code.google.com/p/sifo/downloads/list" class="btn primary">Download package »</a> or <a target="_blank" href="http://code.google.com/p/sifo/" class="btn primary">SVN Checkout »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a></p>
+					<p><a target="_blank" href="http://code.google.com/p/sifo/downloads/list" class="btn primary">Download package »</a> or <a target="_blank" href="http://code.google.com/p/sifo/" class="btn primary">SVN Checkout »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a> or read the <a target="_blank" href="{$url.base}/API" class="btn success">Documentation »</a></p>
 					<p>Quick checkout (latest development version):</p>
 					<form>
 						<textarea rows="1">svn checkout http://sifo.googlecode.com/svn/trunk/ sifo</textarea>
