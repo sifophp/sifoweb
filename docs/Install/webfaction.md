@@ -10,7 +10,8 @@ is for Webfaction, but others are similar.
  * Delete any sample files (index.html)
  * Create a new `.htaccess` file:
 
-Content of .htacces:
+Content of .htaccess:
+
 	RewriteEngine On
 	# Allowed media extensions (includes .txt files for robots or .html, e.g: Google hosted HTMLs):
 	RewriteCond %{REQUEST_FILENAME} !^(.+)\.(js|css|gif|png|jpe?g|swf|ico|txt|html)$
