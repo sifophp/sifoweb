@@ -46,6 +46,8 @@
 		$config['core_inheritance'] = array( 'SEOframework', 'SEOframework5.3' );  // For work with SIFO for php5.3
  */;
 
+$config['redirections'] = array( array( 'from' => 'www.sifo.me', 'to' => 'http://sifo.me' ) );
+
 $config['core_inheritance'] = array( 'SEOframework' );
 // Define the inheritance of this instance (which instances are their parents:
 // $config['instance_inheritance'] = array( 'sifoweb', 'mygrandparent', 'myparent' );
