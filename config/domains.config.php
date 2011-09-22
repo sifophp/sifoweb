@@ -52,8 +52,6 @@ $config['core_inheritance'] = array( 'SEOframework' );
 // Define the inheritance of this instance (which instances are their parents:
 // $config['instance_inheritance'] = array( 'sifoweb', 'mygrandparent', 'myparent' );
 
-$config['redirections'] = array();
-
 $config['sifo.me'] = array(
 	'devel' => false,
 	'instance' => 'sifoweb',
