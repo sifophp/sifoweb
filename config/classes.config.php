@@ -23,6 +23,7 @@ $config['Images'] = 'Images::libs/SEOframework/Images.php';
 $config['LoadBalancer'] = 'LoadBalancer::libs/SEOframework/LoadBalancer.php';
 $config['Mail'] = 'Mail::libs/SEOframework/Mail.php';
 $config['MediaGenerator'] = 'MediaGenerator::libs/SEOframework/MediaGenerator.php';
+$config['MediaPacker'] = 'MediaPacker::libs/SEOframework/MediaPacker.php';
 $config['Metadata'] = 'Metadata::libs/SEOframework/Metadata.php';
 $config['Model'] = 'Model::libs/SEOframework/Model.php';
 $config['Mysql'] = 'Mysql::libs/SEOframework/Mysql.php';
