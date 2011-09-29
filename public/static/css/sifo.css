@@ -65,7 +65,7 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
 		-o-border-radius: 8px;
 		-ms-border-radius: 8px;
 		-khtml-border-radius: 8px;
-		border-radius: 8px;	  
+		border-radius: 8px;
 	}
 	#overview .row { margin-top: 60px; }
 	#overview img { margin-top: 40px }
@@ -75,6 +75,7 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
 
 #documentation h1 { border-bottom: 1px solid #DDD; }
 #documentation h2 { color:#190; }
+#documentation strong {}
 
 #navigation_box { background-color: #CDF; padding: 20px; margin: auto; color: #444;
 	-moz-border-radius: 8px;

@@ -31,7 +31,7 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 
 			$markdown_content = file_get_contents( $file . '.md' );
 			$content = Markdown( $markdown_content );
-			
+
 			$has_title = preg_match( '#<h1>(.*)</h1>#', $content, $matches );
 			if ( $has_title )
 			{
@@ -39,7 +39,7 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 				Metadata::setKey( 'markdown_docs' );
 				Metadata::setValues( 'title', $matches[1] );
 			}
-			
+
 			$this->assign( 'content', $content );
 
 
@@ -49,6 +49,7 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 
 			$this->assign( 'section', $path );
 			$this->assign( 'docs', $this->_formatFilesForMenu( $docs ) );
+
 			$this->assign( 'path', $path );
 		}
 		else
@@ -100,7 +101,7 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 				}
 			}
 		}
-		
+
 		return $paths;
 
 	}

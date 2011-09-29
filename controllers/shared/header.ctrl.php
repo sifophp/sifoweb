@@ -7,10 +7,12 @@ class SharedHeaderSifowebController extends Controller
 	{
 		// Static items shown in the top bar:
 		$menu_items = array(
+			'quick-start',
+			'API',
 			'download',
-			'API'
+
 		);
-		
+
 		$this->setLayout( 'shared/header.tpl' );
 		$params = $this->getParams();
 		$this->assign( 'path', $params['path'] );
