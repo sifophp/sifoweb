@@ -52,4 +52,4 @@ Once the script has finished creating dirs, the `_smarty` folders are writeable 
 
 Then, [configure apache] to point to the new created project and finally visit the URL: <http://myproject.local/rebuild> to automatically prepare all the configuration files ready with your new project.
 
-[configure apache]: /install/apache-virtualhosts
+[configure apache]: /installation/apache-virtualhosts

@@ -52,8 +52,8 @@ You can also directly open the flash files in a new window:
 <iframe width="1051" height="710" src="http://static.sifo.me/flash/sifo_demo_2.swf" frameborder="1" allowfullscreen></iframe>
 
 [download]: /download
-[install]: /install
+[install]: /installation
 [tools]: /tools
 [Directory structure]: /quick-start/directory-structure
 [Create an instance]: /quick-start/creating-instances
-[Configure Apache]: /install/apache-virtualhosts
+[Configure Apache]: /installation/apache-virtualhosts
