@@ -14,7 +14,7 @@ Clone/fork/download from github
 If you want to contribute back, be updated, or just like the github buzzword clone  [SIFO at Github] [GH]
 
 	# Clone the SIFO project into a folder called "sifo":
-	git clone https://github.com/alombarte/SIFO.git sifo
+	git clone git://github.com/alombarte/SIFO.git sifo
 
 Checkout from subversion
 ------------------------
