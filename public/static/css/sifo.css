@@ -35,7 +35,7 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
   font-weight: bold;
 }
 #masthead {
-  margin-top: -20px;
+  margin-top: 20px;
 }
 #masthead h1,
 #masthead p {

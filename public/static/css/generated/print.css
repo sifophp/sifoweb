@@ -1,0 +1,10 @@
+/* START FILE print.css */
+
+#footer, #header, #masthead {
+display:none;
+}
+
+body { font-family: Arial; }
+
+
+/* END print.css */
