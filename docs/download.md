@@ -2,6 +2,8 @@ Download SIFO
 =============
 There are several ways to get a copy or working copy of [SIFO]. You can download a compressed file or checkout or clone the entire project. The code can be both fetched from SVN and Git.
 
+You need at least **PHP 5.3** to run SIFO. If you use PHP 5.2 see below.
+
 The code is hosted under [Github] [GH] and [Google Code] [GC]
 
 Download via tarball
@@ -23,6 +25,17 @@ If you prefer to work with the [subversion repository] [GC] you can also checkou
 	# Checkout the SIFO project into a folder called "sifo":
 	svn checkout http://sifo.googlecode.com/svn/trunk/ sifo
 
+Download SIFO for PHP 5.2
+-------------------------
+If you still need SIFO running for PHP 5.2 servers you can use the specific 5.2 version.
+Please be aware that **support for PHP 5.2 has been discontinued** and the framework won't add more capabilities.
+
+You can find the PHP 5.2 framework here:
+
+ * GIT - Github: <https://github.com/alombarte/SIFO/tags>
+ * SVN - Google Code: ``svn checkout http://sifo.googlecode.com/svn/tags/stable-php-5.2 sifo``
+ * Tarball: [sifo-2.0.1-stable.tar.gz][PHP52tar]
+
 Link summary
 ------------
 These are the main links related to the SIFO project:
@@ -36,4 +49,5 @@ These are the main links related to the SIFO project:
 [SIFO]: http://sifo.me
 [GH]: https://github.com/alombarte/SIFO "Visit the Github SIFO repository"
 [GC]: http://code.google.com/p/sifo/ "Visit the Google Code SIFO repository"
+[PHP52tar]: http://code.google.com/p/sifo/downloads/detail?name=sifo-2.0.1-stable.tar.gz&can=2&q=
 
