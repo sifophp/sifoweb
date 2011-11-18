@@ -11,19 +11,13 @@
  */
 $config['classes_always_preloaded'] = array(
 	'Exceptions',
-	'Registry',
 	'Filter',
 	'Domains',
 	'Urls',
 	'Router',
 	'Controller',
-	'Database',
-	'Model',
 	'View',
-	'I18N',
-	'Benchmark',
 	'Cache',
-	'SharedFirstlevelController'
 );
 
 // Contains all the libraries available.

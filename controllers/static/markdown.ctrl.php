@@ -1,8 +1,9 @@
 <?php
+namespace Sifoweb;
 
 include ROOT_PATH . '/instances/sifoweb/external/PHP_Markdown_Extra_1.2.4/markdown.php';
 
-class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
+class StaticMarkdownController extends SharedFirstlevelController
 {
 
 	const DOCS_LIST_CACHE_KEY = 'list_of_markdown_docs_and_folders__';
@@ -15,6 +16,7 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 		$params = $this->getParams();
 		$path = $params['path'];
 		$valid_paths = $this->getPossiblePaths( $path );
+
 
 
 		// Is a valid path
@@ -36,14 +38,13 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 			if ( $has_title )
 			{
 				$this->getClass( 'Metadata', false );
-				Metadata::setKey( 'markdown_docs' );
-				Metadata::setValues( 'title', $matches[1] );
+				\Sifo\Metadata::setKey( 'markdown_docs' );
+				\Sifo\Metadata::setValues( 'title', $matches[1] );
 			}
 
 			$this->assign( 'content', $content );
 
-
-			$dir = $this->getClass( 'DirectoryList' );
+			$dir = new \Sifo\DirectoryList();
 			// Get only immediate items, not the whole tree:
 			$docs = $dir->getList( dirname( $file ), array( 'md' ) );
 
@@ -54,21 +55,21 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 		}
 		else
 		{
-			throw new Exception_404( 'No markdown file is associated to this path, yet?' );
+			throw new \Sifo\Exception_404( 'No markdown file is associated to this path, yet?' );
 		}
 
 	}
 
 	protected function getPossiblePaths()
 	{
-		$cache = Cache::getInstance();
+		$cache = \Sifo\Cache::getInstance();
 		$paths = $cache->get( self::DOCS_LIST_CACHE_KEY );
 
 
 		if ( false === $paths || $this->hasDebug() )
 		{
 			$parse_folder = ROOT_PATH . '/instances/sifoweb/docs';
-			$dir = $this->getClass( 'DirectoryList' );
+			$dir = new \Sifo\DirectoryList();
 			$files = $dir->getRecursiveList( $parse_folder, true, array( 'md' ) );
 			$paths = $this->_formatFilesForMenu( $files );
 
@@ -80,7 +81,7 @@ class StaticMarkdownSifowebController extends SharedFirstlevelSifowebController
 
 	}
 
-	private function _formatFilesForMenu( Iterator $files )
+	private function _formatFilesForMenu( \Iterator $files )
 	{
 		$paths = array( );
 		foreach ( $files as $path => $file )

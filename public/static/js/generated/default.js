@@ -1,4 +1,4 @@
-sHostStatic = window.sHostStatic ? window.sHostStatic : "http://static.sifo.local";
+sHostStatic = window.sHostStatic ? window.sHostStatic : "http://static.sifo-web.local";
 Hash = window.Hash ? window.Hash : "unset";
 var basePathConfig = {
 	'default': sHostStatic + '/js/generated/default.js?rev=' + Hash

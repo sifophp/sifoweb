@@ -26,22 +26,16 @@
 							sites, from small installations to large websites with multiple servers.</p>
 
 						<p>SIFO is free and very easy to use. Contains a lot of <strong>libraries and classes</strong> that resolve your
-							<strong>basic problems</strong> and allow you to focus in your bussiness logic, at a very low learning curve. If there is a curve :)</p>
+							<strong>basic problems</strong> and allow you to focus in your business logic, at a very low learning curve. If there is a curve :)</p>
 					</div>
-					<p>Download, checkout from the official SVN repository at Google Code or clone, pull, fork... from the Github mirror.</p>
-					<p><a target="_blank" href="http://code.google.com/p/sifo/downloads/list" class="btn primary">Download package »</a> or <a target="_blank" href="http://code.google.com/p/sifo/" class="btn primary">SVN Checkout »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a> or read the <a target="_blank" href="{$url.base}/API" class="btn success">Documentation »</a></p>
-					<p>Quick checkout (latest development version):</p>
-					<form>
-						<textarea rows="1">svn checkout http://sifo.googlecode.com/svn/trunk/ sifo</textarea>
-
-					</form>
-
+					<p>You can download, clone or fork the project from Github.</p>
+					<p><a target="_blank" href="http://code.google.com/p/sifo/downloads/list" class="btn primary">Download package »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a> or read the <a target="_blank" href="{$url.base}/API" class="btn success">Documentation »</a></p>
 				</div>
 			</div> <!-- /row -->
 
 			<div id="overview">
 				<div class="row">
-					<div class="span16 columns"><h1>Architecture</h1></div>
+					<div class="span16 columns"><h1>SIFO features</h1></div>
 				</div>
 
 				<div class="row">
@@ -51,7 +45,7 @@
 						<p>SIFO uses the MVC pattern to sepparate your project in 3 different areas:</p>
 
 						<ul>
-							<li>Models: Contain the bussiness logic. Where all the data is taken from (e.g: Queries to database)</li>
+							<li>Models: Contain the business logic. Where all the data is taken from (e.g: Queries to database)</li>
 							<li>Views: HTML templates with a little bit of logic such as iterations. It's just the presentation of your web. <a href="http://www.smarty.net">Smarty</a> by default.</li>
 							<li>Controllers: The ones that put it all together with any necessary logic.</li>
 						</ul>
@@ -64,22 +58,54 @@
 					</div>
 				</div>
 				<div class="row">
+					<div class="span8 columns">
+						<h3>Scalable</h3>
+
+						<p>SIFO has been developed thinking in scalability and performance. You can configure
+							right from the beginning features like load balancing, separate your static and
+							dynamic content or add advanced caching to your pages.</p>
+					</div>
+					<div class="span8 columns">
+						<h3>Proved</h3>
+						<p>Well proved, running since year 2008 and used in a large base of heterogeneous web projects with very different needs and technologies.</p>
+						<p>Powers big sites, some of them with up to 16M page views/month (and raising!)</p>
+					</div>
+				</div>
+
+				<div class="row">
 					<div class="span11 columns">
-						<h3>Multiple environments</h3>
+						<h3>Inheritance across different projects</h3>
 
-						<p>Via a single file, the mighty <code>config/domains.config.php</code>, you set-up your application.
-							In this file you declare the domains your application will listen to and set the
-							configuration for each one of them. For instance, if you want to code the webpage
-							<strong>http://sifo.me</strong> you might want to set at least 2 domains: The real production
-							domain <em>sifo.me</em> and a fake one for local development <em>sifo.local</em></p>
+						<p>Let's say you have several sites running. Doesn't make sense to you that a project
+						inherits the functionality from another one, or even configurations? Wouldn't be good to reuse the code from
+						a "parent" project?</p>
+						<p>Project inheritance allows you to create several projects (we call it <em>instances</em>) based on a
+						previous one. Be configuration, templates, controllers, models or other libraries. Create an instance
+						that inherits from another one and just overwrite/extend/limit the desired functionality</p>
+						<p>Have you developed a tracking system? A module for advertisement? A fancy WYSIWYG implementation?
+							Why coding it again or even pasting it for yet another project? Reuse!</p>
+						<p>You can run unrelated projects that share common base code.</p>
+					</div>
+					<div class="span5 columns">
+						<img class="nomargin" src="{$url.static}/docs/tree.png" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="span11 columns">
+						<h3>Environment aware</h3>
 
-						<p>In the <code>config/domains.config.php</code> you can set up things like:</p>
+						<p>Via a single file, the mighty <code>config/domains.config.php</code>, you define the behaviour
+							of your application depending on the URL you are requesting. For instance, if you want to code the webpage
+							<strong>http://sifo.me</strong> you might want to set at least 2 domains, one for production usage under
+							<strong>http://sifo.me</strong> and a fake one for local development like <strong>http://sifo-web.local</strong></p>
+
+						<p>In the <code>config/domains.config.php</code> you can set up things <strong>per domain</strong> like:</p>
 
 						<ul>
 							<li>Show/hide the debug (<code>devel</code> flag)</li>
 							<li>Languages accepted by your application</li>
-							<li>Credentials to several services, init commands, master/slave configurations (e.g: mysql)</li>
-							<li>Related hostnames, error reporting and other specific PHP tasks.</li>
+							<li>Credentials to several services, init commands, master/slave configurations, database passwords or libraries used (e.g: mysql)</li>
+							<li>Related hostnames, error reporting and other specific PHP.ini settings.</li>
 						</ul>
 
 					</div>
@@ -134,13 +160,14 @@
 						<img src="{$url.static}/docs/router.jpg" />
 					</div>
 					<div class="span8 columns">
-						<h3>Routing</h3>
+						<h3>Nice URLs and Routing</h3>
 
 						<p>When you type an URL there is a mapping between what you are typing in the address bar
 							and the controller that should reply to that request. Is what we call the <em>router</em> and
 							is located under <code>config/router.config.php</code>. If your application has urls translated
 							you can also use the <code>router_xx_XX.config.php</code> files, where the xx_XX is the language
 							and country code of your app. SIFO supports as much languages as you need.</p>
+						<p>The router is flexible to do all you like, even set controllers to subdomains.</p>
 					</div>
 
 				</div>
@@ -188,59 +215,42 @@
 							We even have translation tools based on config files or in database, so you can
 							pass the URLs to your non-programmers colleagues the URLs for proper translation.</p>
 
-						<p>All the smarty templates come with the i18n plugins that allow you to write your
-							files in a single language. Example: If we had an application with three possible
+						<p>All the templates come with the i18n plugins that allow you to write your
+							files in a single language. Example: If we had an application with 6 possible
 							languages, we could have in the template something like:</p>
 
 						{literal}
 						<pre class="prettyprint">
-<code>&lt;h1&gt;{t 1=$username}Hello %1, welcome back!{/t}&lt;/h1&gt;
+<code>&lt;h1&gt;{t 1=$place}Welcome to %1!{/t}&lt;/h1&gt;
 
-This code would produce a different output depending on the current active language:
+This code would produce a different outputs depending on the current active language:
 
-&lt;h1&gt;Hello John, welcome back!&lt;/h1&gt;
-&lt;h1&gt;Hola Juan, bienvenido de nuevo!&lt;/h1&gt;
-&lt;h1&gt;Hola Joan, benvingut de nou!&lt;/h1&gt;
+English: &lt;h1&gt;Welcome to Sifo!&lt;/h1&gt;
+Spanish: &lt;h1&gt;Bienvenido a Sifo!&lt;/h1&gt;
+Catalan: &lt;h1&gt;Benvingut al Sifo!&lt;/h1&gt;
+Arabic: &lt;h1&gt;<span dir="rtl">أهلاً بك إلى Sifo!</span>&lt;/h1&gt;
+German: &lt;h1&gt;Willkommen bei Sifo&lt;/h1&gt;
+Russian: &lt;h1&gt;Добро пожаловать на Sifo!&lt;/h1&gt;
 </code></pre>
 						{/literal}
 
-						<p>Your application languages are set on the <code>config/domains.config.php</code> file.</p>
-
-						<p>Sometimes we've been asked, yes, there is support for non-latin alphabets. We do
+						<p>Of course you can translate strings in controller, models or your own custom classes (see I18N Class). There is support for non-latin alphabets. We do
 							have several installations in Russian, Arabic, Japanese, Chinese, Hebrew... so yes,
 							and also design with RTL text.</p>
 					</div>
 				</div>
 
-
-				<div class="row">
-					<div class="span11 columns">
-						<h3>Inheritance across different projects</h3>
-
-						<p>Let's say you have several sites running. Doesn't make sense to you that a project
-						inherits the functionality from another one, or even configurations? Wouldn't be good to reuse the code from
-						a "parent" project?</p>
-						<p>Project inheritance allows you to create several projects (we call it <em>instances</em>) based on a
-						previous one. Be configuration, templates, controllers, models or other libraries. Create an instance
-						that inherits from another one and just overwrite/extend/limit the desired functionality</p>
-					</div>
-					<div class="span5 columns">
-						<img class="nomargin" src="{$url.static}/docs/tree.png" />
-					</div>
-				</div>
-
-
 				<div class="row">
 					<div class="span5 columns">
-						<h3> Lazy loading</h3>
+						<h3>Lazy Loading</h3>
 
 						<p><strong>The less classes are in-memory, the better</strong>. We stick to the principle of loading
-							the classe only if they are going to be used.</p>
-						<p>The configuration file <code>config/libraries.config.php</code>
-							defines what classes are loaded per execution, and what versions of the libraries
-							do you use.</p>
+							the classes only if they are going to be used. The autoloader will do the job for you.</p>
+						<p>There are a lot of classes available and interesting libraries ready to use. Just to solve
+						common problems.</p>
 						<p>You can even create several profiles of libraries: maybe you want to
-							play with the latest unstable library in local, while keeping the stable one in production.</p>
+							play with the latest unstable library in local, while keeping the stable one in production.
+							That's defined in <code>libraries.config.php</code></p>
 					</div>
 					<div class="span11 columns">
 						<p>A piece of <code>config/libraries.config.php</code>:</p>
@@ -273,9 +283,9 @@ protected $include_classes = array( 'Filter' );
 					<div class="span11 columns">
 						<h3>Multiple databases flavour</h3>
 
-						<p>From Key-values like Redis to Oracle, Mysql, Postgres, Firebird or even SQLite.
+						<p>From <strong>Key-values</strong> like Redis to common RDBMS like Mysql, Postgres, Oracle, Firebird or even SQLite.
 							You can choose to use Mysql PDO or any of the ADODB drivers. For redis, Predis
-							is an excellent solution.</p>
+							is an excellent solution we use a lot.</p>
 					</div>
 					<div class="span5 columns">
 						<img class="nomargin" src="{$url.static}/docs/databases.png" />
@@ -288,7 +298,7 @@ protected $include_classes = array( 'Filter' );
 						<p>Yes, you like to code your cron jobs in PHP, so do we. Take profit of your existing
 							models. Create your scripts extending from the Command Line.
 							The CLI tool lets you define the supported parameters of the script and automatically
-							builds the help for you. If you are interested in receiveing email reporting is also
+							builds the help for you. If you are interested in receiving email reporting is also
 							already done.</p>
 					</div>
 					<div class="span5 columns">
@@ -303,7 +313,7 @@ protected $include_classes = array( 'Filter' );
 						<p>You never know what is going to happen. Putting your static files in a different
 							host is always a win-win decision. If your site grows you will be able to set
 							up a CDN quickly. The <code>domains.config.php</code> file contains special entries
-							to sepparate dynamic (PHP) from static files (CSS, images, media).
+							to separate dynamic (PHP) from static files (CSS, images, media).
 						</p>
 					</div>
 					<div class="span5 columns">
@@ -317,7 +327,7 @@ protected $include_classes = array( 'Filter' );
 					<div class="span11 columns">
 						<h3>Lots of helpful classes</h3>
 
-						<p>Many projects share the same needs. Do you need to send nice emails? Geolocalise
+						<p>Many projects share the same needs. Do you need to send nice emails? Geo-localise
 							the users? Facebook/Youtube/Twitter integration? Quick searches using Sphinx? Upload
 							files to Amazon S3? Do not reinvent the wheel, invest your time in something else.</p>
 
@@ -327,12 +337,16 @@ protected $include_classes = array( 'Filter' );
 							There is room for entire libraries, simple classes or <em>helpers</em>. Before coding
 							something from scratch, ensure there is not something done already.</p>
 
+						<h3>Tools, tools, tools</h3>
 
+						<p>We do lot of tools and share it with others. From whole instances to deploy your sites in
+						production, to simple scripts to ease administration or develop faster.</p>
 
 						<h3>Yes, more...</h3>
 
 						<p>It's just that I am tired of writing, it is late night. If you arrived
-							here it's time to get a little bit deeper yourself guided by the documentation.</p>
+							here it's time to get a little bit deeper yourself guided by the documentation. It might
+							be a little poor, if you'd like anything to be added or have suggestions, please <a href="https://github.com/inbox/new/alombarte">contact me</a> via GitHub.</p>
 					</div>
 					<div class="span5 columns">
 						<img src="{$url.static}/docs/libraries.png" />

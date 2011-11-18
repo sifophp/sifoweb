@@ -17,4 +17,4 @@ define( 'ROOT_PATH', $root );
 require ROOT_PATH . '/instances/Bootstrap.php';
 
 // Execute your instance:
-Bootstrap::execute( $instance );
+\Sifo\Bootstrap::execute( $instance );

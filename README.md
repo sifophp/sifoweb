@@ -16,14 +16,14 @@ Then in your Apache virtualhosts you should add something like:
 
 	# SIFO.ME
 	<VirtualHost *:80>
-			ServerName static.sifo.local
-			DocumentRoot /var/www/seoframework/instances/sifoweb/public/static
+			ServerName static.sifo-web.local
+			DocumentRoot /var/www/sifo/instances/sifoweb/public/static
 	</VirtualHost>
 
 	<VirtualHost *:80>
-			ServerName sifo.local
-			ServerAlias *.sifo.local
-			DocumentRoot /var/www/seoframework/instances/sifoweb/public/root
+			ServerName sifo-web.local
+			ServerAlias *.sifo-web.local
+			DocumentRoot /var/www/sifo/instances/sifoweb/public/root
 
 			RewriteEngine On
 			#Allowed media extensions (includes .txt files for robots or .html, e.g: Google hosted HTMLs):
@@ -32,4 +32,4 @@ Then in your Apache virtualhosts you should add something like:
 	</VirtualHost>
 
 **Note** that there are 2 hosts. One for static files, and another for dynamic files.
-Change the route `/var/www/seoframework/` by the route where your project is.
+Change the route `/var/www/sifo/` by the route where your project is.

@@ -1,6 +1,7 @@
 <?php
+namespace Sifoweb;
 
-class SharedHeaderSifowebController extends Controller
+class SharedHeaderController extends \Sifo\Controller
 {
 
 	final public function build()
@@ -10,7 +11,6 @@ class SharedHeaderSifowebController extends Controller
 			'quick-start',
 			'API',
 			'download',
-
 		);
 
 		$this->setLayout( 'shared/header.tpl' );

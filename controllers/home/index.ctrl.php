@@ -1,9 +1,10 @@
 <?php
+namespace Sifoweb;
 
 /**
  * Simple controller for the homepage.
  */
-class HomeIndexSifowebController extends SharedFirstlevelSifowebController
+class HomeIndexController extends SharedFirstlevelController
 {
 	public function buildChild()
 	{
