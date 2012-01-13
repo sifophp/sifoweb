@@ -6,6 +6,7 @@
 {			foreach from=$menu_items item=item}
 			<li{if $path==$item} class="active"{/if}><a href="{$url.base}/{$item}">{$item|replace:'-':' '|ucwords}</a></li>
 {			/foreach}
+			<li><a href="https://github.com/alombarte/SIFO/issues">Issues</a></li>
           </ul>
         </div>
       </div>

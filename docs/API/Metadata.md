@@ -30,6 +30,9 @@ To translate your metadata files to other languages all you have to do is create
 ### 2) Set the metadata in the controller ###
 Now we are in the articles controller and we'd like to pick up the "article_for_sale" pattern and fill it with the current article. In the controller we place:
 
+	use \Sifo\Metadata as Metadata;
+	// ...
+
 	Metadata::setKey( 'article_for_sale' );
 	Metadata::setValues( 'name', 'Monkey Wrench' );
 	Metadata::setValues( 'section', 'Do it yourself tools' );

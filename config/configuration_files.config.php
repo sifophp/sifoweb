@@ -14,6 +14,7 @@ $config = array (
   'lang/router_es_ES' => 'instances/sifoweb/config/lang/router_es_ES.config.php',
   'languages' => 'instances/sifoweb/config/languages.config.php',
   'libraries' => 'instances/sifoweb/config/libraries.config.php',
+  'locale' => 'instances/sifoweb/config/locale.config.php',
   'mail' => 'instances/sifoweb/config/mail.config.php',
   'memcache' => 'instances/sifoweb/config/memcache.config.php',
   'openinviter' => 'instances/sifoweb/config/openinviter.config.php',

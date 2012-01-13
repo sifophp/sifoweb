@@ -29,14 +29,13 @@ Code:
 	// On development create all the packed files on the fly:
 	if ( Domains::getInstance()->getDevMode() )
 	{
-		$this->getClass( 'MediaPacker', false );
-		$packer = new JsPacker();
+		$packer = new \Sifo\JsPacker();
 		$packer->packMedia();
-		// $packer = new CssPacker();
+		// $packer = new \Sifo\CssPacker();
 		// $packer->packMedia();
 	}	
 	
-This is already working in the `default` instance. You can have a look at the file `controllers/shared/head.ctrl.php`, function `assignMedia()`. It is very handy to have this code in development time, but you can also pack your files with a script.
+This is already working in the `common` instance. You can have a look at the file `controllers/shared/head.ctrl.php`, function `assignMedia()`. It is very handy to have this code in development time, but you can also pack your files with a script.
 
 **IMPORTANT**: If you create your own packing functions ensure the files are only packed and merged in the development environment, so there is no performance effect on production.
 

@@ -29,7 +29,7 @@
 							<strong>basic problems</strong> and allow you to focus in your business logic, at a very low learning curve. If there is a curve :)</p>
 					</div>
 					<p>You can download, clone or fork the project from Github.</p>
-					<p><a target="_blank" href="http://code.google.com/p/sifo/downloads/list" class="btn primary">Download package »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a> or read the <a target="_blank" href="{$url.base}/API" class="btn success">Documentation »</a></p>
+					<p><a target="_blank" href="https://github.com/alombarte/SIFO/tags" class="btn primary">Download package »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a> or read the <a target="_blank" href="{$url.base}/API" class="btn success">Documentation »</a></p>
 				</div>
 			</div> <!-- /row -->
 

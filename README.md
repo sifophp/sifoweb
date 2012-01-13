@@ -2,7 +2,7 @@ README
 ======
 Sifoweb is the source code of the site <http://sifo.me>, which is also a an
 instance of [SIFO]. You can use this instance to understand a little bit how to
-code a SIFO instance. 
+code a SIFO instance.
 
  [SIFO]: https://github.com/alombarte/SIFO
 
@@ -17,6 +17,7 @@ Then in your Apache virtualhosts you should add something like:
 	# SIFO.ME
 	<VirtualHost *:80>
 			ServerName static.sifo-web.local
+			ServerName static.sifo.local
 			DocumentRoot /var/www/sifo/instances/sifoweb/public/static
 	</VirtualHost>
 

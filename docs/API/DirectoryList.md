@@ -6,7 +6,7 @@ The content returned by the `DirectoryList` can be looped and use internal [SPL]
 
 [SPL]: http://www.php.net/manual/en/book.spl.php
 
-	$dir = $this->getClass( 'DirectoryList' );
+	$dir = \Sifo\DirectoryList();
 	
 	// Get immediate files with .html extension:
 	$parse_folder = ROOT_PATH . '/instances/sifoweb/docs';

@@ -1,7 +1,9 @@
 Search powered by Sphinx
 ========================
 
-The `Search` class is a wrapper for SphinxClient. The class has a `__call` function that will pass all the unknown functions to the `SphinxClient` (@see `libs/Sphinx/sphinxapi.php`).
+The `Search` class is a an extension of the original `SphinxClient` published by the Sphinx project (@see `libs/Sphinx/sphinxapi.php`).
+
+Back in 2010 we did test Solr and Lucene as well, but we liked the most Sphinx, which has been performing awesome for the past years. This is why Search for us is a synonym of Sphinx :)
 
 The installation of Sphinx is not covered here, just querying an existing Sphinx installation.
 
@@ -11,28 +13,26 @@ Once you have your Sphinx up and running you need to include the Search class in
 
 First of all, in your model/controller add the class on runtime:
 
+	use \Sifo\Search as Search;
+
 	class MySphinxclassModel extends Model
 	{
 
-	/**
-	 * List of classes that will be included in first place.
-	 */
-	protected $include_classes = array( 'Search' );
 	// ...
 
-Once the class `Search` is included, to launch a search:
+Then in order to launch a search, this is an example:
 
-	// Returns the first 5 results. "page 1".
-	Search::SetLimits(0, 5);
+	// Returns the first 5 results, let's say we want the "page 1".
+	Search::SetLimits( 0, 5 );
 
-	// Only search posts in sub-forums 1, 3 and 7.
-	Search::SetFilter('forum_id', array (1,3,7));
+	// Only search posts in forums with ID 1, 3 and 7.
+	Search::SetFilter( 'forum_id', array ( 1, 3, 7 ) );
  
-	// Sort found posts by posting date in descending order.
-	Search::SetSortMode(SPH_SORT_ATTR_DESC, 'post_date');
+	// Sort posts found by date, in descending order.
+	Search::SetSortMode( SPH_SORT_ATTR_DESC, 'post_date' );
 
 	// Launch Sphinx search.
-	Search::Query('test', 'main delta');
+	Search::Query( '@(title,content) abracadabra', 'main delta' );
 
 In order to properly understand how Sphinx and the PHP client works you should refer to the [Sphinx docs] [S].
 

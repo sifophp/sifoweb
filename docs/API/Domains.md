@@ -26,3 +26,11 @@ Checks that a given URL is inside a known domain and depending on the domain mak
 	                'db_init_commands' => array( 'SET NAMES utf8' )
 	                )
 	        );
+
+Based on this configuration file, the class offers several methods that give you Domain based information such as:
+
+* `\Sifo\Domains::getDomain()`
+* `\Sifo\Domains::getSubDomain()`
+* `\Sifo\Domains::getDevMode()` To know if the instance you are working is in development mode.
+* `\Sifo\Domains::getLanguage()` The language of this domain.
+* ... See the class for the rest of methods.

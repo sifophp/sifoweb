@@ -6,8 +6,10 @@ The class `Crypt` is a simple way to encrypt/decrypt a string without any PHP mo
 
 Usage:
 
+    use \Sifo\Crypt as Crypt;
+    // ...
+
 	// Init encryption seed before anything else:
-	Bootstrap::getClass( 'Crypt', false ); // The false param avoids the constructor being called
 	Crypt::$seed = 'ThisIsMySecret';
 
 	$email = 'email@domain.com';

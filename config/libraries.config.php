@@ -22,6 +22,6 @@ $config['classes_always_preloaded'] = array(
 
 // Contains all the libraries available.
 $config['default'] = array(
-	'smarty' => 'Smarty-3.0.7',
+	'smarty' => 'Smarty-3.1.4',
 	'adodb' => 'adodb5',
 );

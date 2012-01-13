@@ -12,8 +12,8 @@ Of course your application can have models extending from different classes and 
 
 If, on the contrary, your application is using a distinct RDBM than Mysql (see supported databases) this is the class you have to extend from.
 
-How it works
-------------
+How it works (`Model` only)
+---------------------------
 **Requisites:** To extend directly from the `Model` class you will need to have the class included first. To do so you only need to include the Model in your `config/libraries.config.php` file. Then you will be able to extend from Model without including by hand the model.
 
 When you extend your model from this class you are using internally the **ADODB library** and all the DB-related functions that you call are passed directly to the [ADODB] library.

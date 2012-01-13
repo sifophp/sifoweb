@@ -7,11 +7,11 @@ The content of the file can be anything you want, just keep the `$config` variab
 
 To retrieve a configuration file from the application you can do:
 
-	Config::getInstance()->getConfig( 'myconfig' ) // Loads yourinstance/config/myconfig.config.php 
+	\Sifo\Config::getInstance()->getConfig( 'myconfig' ) // Loads yourinstance/config/myconfig.config.php
 
 If you need to open the configuration file of another instance you can do
 
-	Config::getInstance( 'name_of_other_instance' )->getConfig( 'file' );
+	\Sifo\Config::getInstance( 'name_of_other_instance' )->getConfig( 'file' );
 
 A configuration sample
 -------------------------
@@ -43,8 +43,8 @@ A configuration file could look like this:
 		);
 Some access samples:
 
-	Config::getInstance()->getConfig( 'languages' );
+	\Sifo\Config::getInstance()->getConfig( 'languages' );
 	// Returns the whole previous array
 
-	Config::getInstance()->getConfig( 'languages', 'ru_RU' );
+	\Sifo\Config::getInstance()->getConfig( 'languages', 'ru_RU' );
 	// Returns  array( 'dir' => 'ltr', 'domain' => 'ru', 'name' => 'Russian', 'translated' => 'Русский' )

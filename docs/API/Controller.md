@@ -1,28 +1,32 @@
 Controller
 ==========
-Not all methods are explained here in detail. This is a quick overview, the classes are comented itself. You can use phpDocumentor if you want over the whole project if you feel more confortable with it.
+Not all methods are explained here in detail. This is a quick overview, the classes are commented itself. You can use phpDocumentor if you want over the whole project if you feel more comfortable with it.
 
-Creating your Controller
-------------------------
-To create a controller create or pick a folder inside the `controllers` folder an put a file with the extension `.ctrl.php`. To make the system recognise the just created file (this applies to any model, class or template as well) you have to **rebuild** the configuration.
+Creating a Controller
+---------------------
+To create a controller create or pick a folder inside the `controllers` folder and put a file with the extension `.ctrl.php` or `.php`. To make the system recognise the just created file (this applies to any model, class or template as well) you have to **rebuild** the configuration.
 
-If your just created file is `myinstance/controllers/myfolder/mycontroller.ctrl.php` then the class has to be named `MyfolderMycontrollerMyinstanceController`.
+If your just created file is `myinstance/controllers/myfolder/mycontroller.ctrl.php` then the class has to be named `MyfolderMycontrollerController` and the namespace must match with your instance name with the first letter in uppercase.
 
-Then you need to implement the `build()` method, and at least call the `setLayout( $template )` function defining the smarty template that will be taken to display the output.
+Then you need to implement the `build()` method, and at least call the `setLayout( $template )` function, which defines the smarty template that will be taken to display the output.
 
 So far, the controller would look like this:
 
 	<?php
-	
+	namespace Myinstance;
+
 	class MyfolderMycontrollerMyinstanceController extends Controller
 	{
 		public function build()
 		{
-			$this->setLayout( 'home/index.tpl' );
+			$this->setLayout( 'home/index.tpl' ); // Relative from templates/ dir
 		}
 	}
 
-With this file you would be able to render the `templates/home/index.tpl` file.
+With this controller you would be able to render the `templates/home/index.tpl` file.
+
+### Routing the controller to make it respond to an URL ###
+Now you have the controller, but the framework doesn't know which type of URL is going to use it. To make this possible you have to add this controller to the router configuration file, which is `config/router.config.php`.
 
 ### Ajax controllers ###
 It is common to create a controller that returns JSON output as part of an AJAX response. When doing so, the Controller instead of setting a layout (`setLayout()`) all you need is to return the desired data in the build() method and will be automatically json encoded and headers set.
@@ -75,7 +79,7 @@ If you don't want to wait until the cache expires the controller can force the c
 Sometimes you need some piece of HTML code processed by the template and set to a variable (imagine an application that loops users and sends a custom email per user). Then you can use the `fetch` function.
 
 	$body = $this->fetch( 'email/confirmation.tpl' );
-	Mail::send( $email, $subject, $body ) );
+	\Sifo\Mail::send( $email, $subject, $body ) );
 	
 ### Translations in Controller ###
 Is not always possible to translate everything in the template. When you need to do this in a controller you can use:
@@ -94,21 +98,21 @@ The most common use of the translations in the controller context is for setting
 
 	FlashMessages::set( $this->translate(
 		'Error while updating %1.', $email ),
-		FlashMessages::MSG_KO
+		\Sifo\FlashMessages::MSG_KO
 	);  // K.O. message
 	FlashMessages::set( $this->translate(
 		'Sucessfully updated %1.', $email ),
-		FlashMessages::MSG_OK
+		\Sifo\FlashMessages::MSG_OK
 	);  // Success. message
 
 ### Redispatch: An ugly hack ###	
 `$this->reDispatch( $controller )`
 
-Stop the execution of the current controller and dispatch the controller passed in the $controller variable using the format folder/controller. E.g:.
+Stops the execution of the current controller and dispatch the controller passed in the $controller variable using the format folder/controller. E.g:.
 
 	$this->reDispatch( 'home/index' );
 
-It is an ugly hack because you start over again with a new Controller and the memory is full with the previous execution. A good programmer would never use it :)
+It is an ugly hack because you start over again with a new Controller and the memory is full with the previous execution. A good programmer would never use it, it is like a GOTO! :)
 
 ### Before and after executing your controller###
 The methods `preDispatch()` and `postDispatch()` are called before and after the dispatch of the controller.
