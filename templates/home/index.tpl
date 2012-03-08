@@ -17,7 +17,11 @@
 		<section id="introduction">
 			<div class="row">
 				<div class="span5 columns">
-					<img alt="SIFO logo" src="{$url.static}/css/images/logo.jpg" />
+					<img alt="SIFO logo" src="{$url.static}/css/images/logo.jpg" /><br/>
+					<a href="{$url.base}/in-loving-memory" title="In memory of Carlos Soriano">
+                    <img alt="crespon" src="{$url.static}/css/images/crespon.jpeg" />
+                    </a>
+
 				</div>
 				<div class="span11 columns">
 
