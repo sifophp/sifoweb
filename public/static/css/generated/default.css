@@ -366,9 +366,12 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
   text-shadow: 0 1px 1px rgba(0,0,0,.3);
 }
 #masthead p a,
-#footer p a {
+#footer p {
   color: #fff;
-  font-weight: bold;
+}
+
+#footer a {
+    color: #99BBFF;
 }
 #masthead {
   margin-top: 20px;
