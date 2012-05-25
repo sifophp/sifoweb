@@ -1,329 +1,54 @@
 <?php
-$config = array (
-  'APITwitter' => 
-  array (
-    'Sifo' => 'libs/Sifo/API/Twitter.php',
-  ),
-  'APIYoutube' => 
-  array (
-    'Sifo' => 'libs/Sifo/API/Youtube.php',
-  ),
-  'AmazonS3' => 
-  array (
-    'Sifo' => 'libs/Sifo/AmazonS3.php',
-  ),
-  'Benchmark' => 
-  array (
-    'Sifo' => 'libs/Sifo/Benchmark.php',
-  ),
-  'Cache' => 
-  array (
-    'Sifo' => 'libs/Sifo/Cache.php',
-  ),
-  'CacheBase' => 
-  array (
-    'Sifo' => 'libs/Sifo/Cache/Base.php',
-  ),
-  'CacheDisk' => 
-  array (
-    'Sifo' => 'libs/Sifo/Cache/Disk.php',
-  ),
-  'CacheMemcache' => 
-  array (
-    'Sifo' => 'libs/Sifo/Cache/Memcache.php',
-  ),
-  'CacheMemcached' => 
-  array (
-    'Sifo' => 'libs/Sifo/Cache/Memcached.php',
-  ),
-  'Client' => 
-  array (
-    'Sifo' => 'libs/Sifo/Client.php',
-  ),
-  'Config' => 
-  array (
-    'Sifo' => 'libs/Sifo/Config.php',
-  ),
-  'Controller' => 
-  array (
-    'Sifo' => 'libs/Sifo/Controller.php',
-  ),
-  'Cookie' => 
-  array (
-    'Sifo' => 'libs/Sifo/Cookie.php',
-  ),
-  'Crypt' => 
-  array (
-    'Sifo' => 'libs/Sifo/Crypt.php',
-  ),
-  'CssPacker' => 
-  array (
-    'Sifo' => 'libs/Sifo/CssPacker.php',
-  ),
-  'Database' => 
-  array (
-    'Sifo' => 'libs/Sifo/Database.php',
-  ),
-  'DebugMysql' => 
-  array (
-    'Sifo' => 'libs/Sifo/Debug/Mysql.php',
-  ),
-  'Dir' => 
-  array (
-    'Sifo' => 'libs/Sifo/Dir.php',
-  ),
-  'DirectoryList' => 
-  array (
-    'Sifo' => 'libs/Sifo/DirectoryList.php',
-  ),
-  'Domains' => 
-  array (
-    'Sifo' => 'libs/Sifo/Domains.php',
-  ),
-  'Exceptions' => 
-  array (
-    'Sifo' => 'libs/Sifo/Exceptions.php',
-  ),
-  'Filter' => 
-  array (
-    'Sifo' => 'libs/Sifo/Filter.php',
-  ),
-  'FlashMessages' => 
-  array (
-    'Sifo' => 'libs/Sifo/FlashMessages.php',
-  ),
-  'Form' => 
-  array (
-    'Sifo' => 'libs/Sifo/Form.php',
-  ),
-  'I18N' => 
-  array (
-    'Sifo' => 'libs/Sifo/I18N.php',
-  ),
-  'ImageController' => 
-  array (
-    'Sifo' => 'libs/Sifo/imageController.php',
-  ),
-  'Images' => 
-  array (
-    'Sifo' => 'libs/Sifo/Images.php',
-  ),
-  'JsPacker' => 
-  array (
-    'Sifo' => 'libs/Sifo/JsPacker.php',
-  ),
-  'Keyspace' => 
-  array (
-    'Sifo' => 'libs/Sifo/Keyspace.php',
-  ),
-  'LoadBalancer' => 
-  array (
-    'Sifo' => 'libs/Sifo/LoadBalancer.php',
-  ),
-  'Mail' => 
-  array (
-    'Sifo' => 'libs/Sifo/Mail.php',
-  ),
-  'MediaGenerator' => 
-  array (
-    'Sifo' => 'libs/Sifo/MediaGenerator.php',
-  ),
-  'MediaPacker' => 
-  array (
-    'Sifo' => 'libs/Sifo/MediaPacker.php',
-  ),
-  'Metadata' => 
-  array (
-    'Sifo' => 'libs/Sifo/Metadata.php',
-  ),
-  'Model' => 
-  array (
-    'Sifo' => 'libs/Sifo/Model.php',
-  ),
-  'Mysql' => 
-  array (
-    'Sifo' => 'libs/Sifo/Mysql.php',
-  ),
-  'MysqlModel' => 
-  array (
-    'Sifo' => 'libs/Sifo/MysqlModel.php',
-  ),
-  'PaypalNotifier' => 
-  array (
-    'Sifo' => 'libs/Sifo/PaypalNotifier.php',
-  ),
-  'RedisModel' => 
-  array (
-    'Sifo' => 'libs/Sifo/RedisModel.php',
-  ),
-  'Registry' => 
-  array (
-    'Sifo' => 'libs/Sifo/Registry.php',
-  ),
-  'Router' => 
-  array (
-    'Sifo' => 'libs/Sifo/Router.php',
-  ),
-  'Search' => 
-  array (
-    'Sifo' => 'libs/Sifo/Search.php',
-  ),
-  'Session' => 
-  array (
-    'Sifo' => 'libs/Sifo/Session.php',
-  ),
-  'Urls' => 
-  array (
-    'Sifo' => 'libs/Sifo/Urls.php',
-  ),
-  'View' => 
-  array (
-    'Sifo' => 'libs/Sifo/View.php',
-  ),
-  'HelperPasswordGenerator' => 
-  array (
-    'Common' => 'instances/common/classes/HelperPasswordGenerator.php',
-  ),
-  'Inviter' => 
-  array (
-    'Common' => 'instances/common/classes/inviter.php',
-  ),
-  'Krumo' => 
-  array (
-    'Common' => 'instances/common/classes/Krumo.php',
-  ),
-  'MailExt' => 
-  array (
-    'Common' => 'instances/common/classes/MailExt.php',
-  ),
-  'Pagination' => 
-  array (
-    'Common' => 'instances/common/classes/Pagination.php',
-  ),
-  'DebugIndexController' => 
-  array (
-    'Common' => 'instances/common/controllers/debug/index.ctrl.php',
-  ),
-  'DebugMailController' => 
-  array (
-    'Common' => 'instances/common/controllers/debug/mail.ctrl.php',
-  ),
-  'ErrorCommonController' => 
-  array (
-    'Common' => 'instances/common/controllers/error/common.ctrl.php',
-  ),
-  'HomeIndexController' => 
-  array (
-    'Common' => 'instances/common/controllers/home/index.ctrl.php',
-    'Sifoweb' => 'instances/sifoweb/controllers/home/index.ctrl.php',
-  ),
-  'I18nRebuildController' => 
-  array (
-    'Common' => 'instances/common/controllers/i18n/rebuild.ctrl.php',
-  ),
-  'I18nSaveController' => 
-  array (
-    'Common' => 'instances/common/controllers/i18n/save.ctrl.php',
-  ),
-  'I18nStatusController' => 
-  array (
-    'Common' => 'instances/common/controllers/i18n/status.ctrl.php',
-  ),
-  'LocalesIndexController' => 
-  array (
-    'Common' => 'instances/common/controllers/locales/index.ctrl.php',
-  ),
-  'LocalesSaveController' => 
-  array (
-    'Common' => 'instances/common/controllers/locales/save.ctrl.php',
-  ),
-  'ManagerFindi18nController' => 
-  array (
-    'Common' => 'instances/common/controllers/manager/findi18n.ctrl.php',
-  ),
-  'ManagerRebuildController' => 
-  array (
-    'Common' => 'instances/common/controllers/manager/rebuild.ctrl.php',
-  ),
-  'ManagerRebuildRouterController' => 
-  array (
-    'Common' => 'instances/common/controllers/manager/rebuildRouter.php',
-  ),
-  'ManagerRebuildi18nLocalController' => 
-  array (
-    'Common' => 'instances/common/controllers/manager/rebuildi18nLocal.php',
-  ),
-  'ManagerTemplateLauncherController' => 
-  array (
-    'Common' => 'instances/common/controllers/manager/templateLauncher.ctrl.php',
-  ),
-  'ScriptsFlushCacheController' => 
-  array (
-    'Common' => 'instances/common/controllers/scripts/flushCache.php',
-  ),
-  'ScriptsLoadAvgAutoswitchController' => 
-  array (
-    'Common' => 'instances/common/controllers/scripts/loadAvgAutoswitch.php',
-  ),
-  'ScriptsSendLogController' => 
-  array (
-    'Common' => 'instances/common/controllers/scripts/sendLog.php',
-  ),
-  'SharedAdvertisingController' => 
-  array (
-    'Common' => 'instances/common/controllers/shared/advertising.ctrl.php',
-  ),
-  'SharedCommandLineController' => 
-  array (
-    'Common' => 'instances/common/controllers/shared/commandLine.ctrl.php',
-  ),
-  'SharedFirstLevelController' => 
-  array (
-    'Common' => 'instances/common/controllers/shared/firstLevel.ctrl.php',
-  ),
-  'SharedFirstlevelController' => 
-  array (
-    'Sifoweb' => 'instances/sifoweb/controllers/shared/firstlevel.ctrl.php',
-  ),
-  'SharedFooterController' => 
-  array (
-    'Common' => 'instances/common/controllers/shared/footer.ctrl.php',
-  ),
-  'SharedHeadController' => 
-  array (
-    'Common' => 'instances/common/controllers/shared/head.ctrl.php',
-  ),
-  'SharedHeaderController' => 
-  array (
-    'Common' => 'instances/common/controllers/shared/header.ctrl.php',
-    'Sifoweb' => 'instances/sifoweb/controllers/shared/header.ctrl.php',
-  ),
-  'SharedSystemMessagesController' => 
-  array (
-    'Common' => 'instances/common/controllers/shared/systemMessages.ctrl.php',
-  ),
-  'StaticIndexController' => 
-  array (
-    'Common' => 'instances/common/controllers/static/index.ctrl.php',
-  ),
-  'StaticMarkdownController' => 
-  array (
-    'Sifoweb' => 'instances/sifoweb/controllers/static/markdown.ctrl.php',
-  ),
-  'UserLoginController' => 
-  array (
-    'Common' => 'instances/common/controllers/user/login.ctrl.php',
-  ),
-  'I18nListModel' => 
-  array (
-    'Common' => 'instances/common/models/i18n/list.model.php',
-  ),
-  'I18nTranslatorModel' => 
-  array (
-    'Common' => 'instances/common/models/i18n/translator.model.php',
-  ),
-  'OAuthTwitterModel' => 
-  array (
-    'Common' => 'instances/common/models/OAuth/twitter.model.php',
-  ),
-);
+include ROOT_PATH . '/instances/common/config/classes.config.php';
+$config['APITwitter']['Sifo'] = 'libs/Sifo/API/Twitter.php';
+$config['APIYoutube']['Sifo'] = 'libs/Sifo/API/Youtube.php';
+$config['AmazonS3']['Sifo'] = 'libs/Sifo/AmazonS3.php';
+$config['Benchmark']['Sifo'] = 'libs/Sifo/Benchmark.php';
+$config['Cache']['Sifo'] = 'libs/Sifo/Cache.php';
+$config['CacheBase']['Sifo'] = 'libs/Sifo/Cache/Base.php';
+$config['CacheDisk']['Sifo'] = 'libs/Sifo/Cache/Disk.php';
+$config['CacheMemcache']['Sifo'] = 'libs/Sifo/Cache/Memcache.php';
+$config['CacheMemcached']['Sifo'] = 'libs/Sifo/Cache/Memcached.php';
+$config['Client']['Sifo'] = 'libs/Sifo/Client.php';
+$config['Config']['Sifo'] = 'libs/Sifo/Config.php';
+$config['Controller']['Sifo'] = 'libs/Sifo/Controller.php';
+$config['Cookie']['Sifo'] = 'libs/Sifo/Cookie.php';
+$config['Crypt']['Sifo'] = 'libs/Sifo/Crypt.php';
+$config['CssPacker']['Sifo'] = 'libs/Sifo/CssPacker.php';
+$config['Database']['Sifo'] = 'libs/Sifo/Database.php';
+$config['DebugMessages']['Sifo'] = 'libs/Sifo/Debug/Messages.php';
+$config['DebugMysql']['Sifo'] = 'libs/Sifo/Debug/Mysql.php';
+$config['DebugSearch']['Sifo'] = 'libs/Sifo/Debug/Search.php';
+$config['Dir']['Sifo'] = 'libs/Sifo/Dir.php';
+$config['DirectoryList']['Sifo'] = 'libs/Sifo/DirectoryList.php';
+$config['Domains']['Sifo'] = 'libs/Sifo/Domains.php';
+$config['Exceptions']['Sifo'] = 'libs/Sifo/Exceptions.php';
+$config['Filter']['Sifo'] = 'libs/Sifo/Filter.php';
+$config['FlashMessages']['Sifo'] = 'libs/Sifo/FlashMessages.php';
+$config['Form']['Sifo'] = 'libs/Sifo/Form.php';
+$config['I18N']['Sifo'] = 'libs/Sifo/I18N.php';
+$config['ImageController']['Sifo'] = 'libs/Sifo/imageController.php';
+$config['Images']['Sifo'] = 'libs/Sifo/Images.php';
+$config['JsPacker']['Sifo'] = 'libs/Sifo/JsPacker.php';
+$config['Keyspace']['Sifo'] = 'libs/Sifo/Keyspace.php';
+$config['LoadBalancer']['Sifo'] = 'libs/Sifo/LoadBalancer.php';
+$config['Mail']['Sifo'] = 'libs/Sifo/Mail.php';
+$config['MediaGenerator']['Sifo'] = 'libs/Sifo/MediaGenerator.php';
+$config['MediaPacker']['Sifo'] = 'libs/Sifo/MediaPacker.php';
+$config['Metadata']['Sifo'] = 'libs/Sifo/Metadata.php';
+$config['Model']['Sifo'] = 'libs/Sifo/Model.php';
+$config['Mysql']['Sifo'] = 'libs/Sifo/Mysql.php';
+$config['MysqlModel']['Sifo'] = 'libs/Sifo/MysqlModel.php';
+$config['PaypalNotifier']['Sifo'] = 'libs/Sifo/PaypalNotifier.php';
+$config['RedisModel']['Sifo'] = 'libs/Sifo/RedisModel.php';
+$config['Registry']['Sifo'] = 'libs/Sifo/Registry.php';
+$config['Router']['Sifo'] = 'libs/Sifo/Router.php';
+$config['Search']['Sifo'] = 'libs/Sifo/Search.php';
+$config['Session']['Sifo'] = 'libs/Sifo/Session.php';
+$config['Urls']['Sifo'] = 'libs/Sifo/Urls.php';
+$config['View']['Sifo'] = 'libs/Sifo/View.php';
+$config['HomeIndexController']['Sifoweb'] = 'instances/sifoweb/controllers/home/index.ctrl.php';
+$config['SharedFirstlevelController']['Sifoweb'] = 'instances/sifoweb/controllers/shared/firstlevel.ctrl.php';
+$config['SharedHeaderController']['Sifoweb'] = 'instances/sifoweb/controllers/shared/header.ctrl.php';
+$config['StaticMarkdownController']['Sifoweb'] = 'instances/sifoweb/controllers/static/markdown.ctrl.php';
+

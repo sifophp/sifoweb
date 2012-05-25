@@ -1,7 +1,4 @@
 <?php
-$config = array (
-  'messages_en_US' => 'instances/sifoweb/locale/messages_en_US.php',
-  'messages_es_ES' => 'instances/common/locale/messages_es_ES.php',
-  'urlparams_en_US' => 'instances/common/locale/urlparams_en_US.php',
-  'urlparams_es_ES' => 'instances/common/locale/urlparams_es_ES.php',
-);
+include ROOT_PATH . '/instances/common/config/locale.config.php';
+$config['messages_en_US'] = 'instances/sifoweb/locale/messages_en_US.php';
+

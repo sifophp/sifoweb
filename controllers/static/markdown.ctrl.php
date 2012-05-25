@@ -32,6 +32,9 @@ class StaticMarkdownController extends SharedFirstlevelController
 			}
 
 			$markdown_content = file_get_contents( $file . '.md' );
+			// Substitute all <url:xxxx> entries with its corresponding URL:
+			$markdown_content = preg_replace_callback( '/\<url\:([a-z0-9]+)>/', array( $this, 'getUrlByKey' ), $markdown_content );
+
 			$content = Markdown( $markdown_content );
 
 			$has_title = preg_match( '#<h1>(.*)</h1>#', $content, $matches );
@@ -58,6 +61,16 @@ class StaticMarkdownController extends SharedFirstlevelController
 			throw new \Sifo\Exception_404( 'No markdown file is associated to this path, yet?' );
 		}
 
+	}
+
+	/**
+	 * @param $matches
+	 * @return mixed
+	 */
+	private function getUrlByKey( $matches )
+	{
+		$params = $this->getParams();
+		return $params['url'][$matches[1]];
 	}
 
 	protected function getPossiblePaths()
