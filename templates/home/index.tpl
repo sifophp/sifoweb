@@ -16,10 +16,10 @@
 	<div class="container">
 		<section id="introduction">
 			<div class="row">
-				<div class="span5 columns">
+				<div class="span4 columns">
 					<img alt="SIFO logo" src="{$url.static}/css/images/logo.jpg" /><br/>
 				</div>
-				<div class="span11 columns">
+				<div class="span8 columns">
 
 					<div class="teaser well">
 						<p><a href="http://sifo.me">SIFO</a> is a well-proben open source PHP5 framework currently running on several
@@ -29,17 +29,19 @@
 							<strong>basic problems</strong> and allow you to focus in your business logic, at a very low learning curve. If there is a curve :)</p>
 					</div>
 					<p>You can download, clone or fork the project from Github.</p>
-					<p><a target="_blank" href="https://github.com/alombarte/SIFO/tags" class="btn primary">Download package »</a> or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn primary">Git Clone»</a> or read the <a target="_blank" href="{$url.base}/API" class="btn success">Documentation »</a></p>
+					<p><a target="_blank" href="https://github.com/alombarte/SIFO/tags" class="btn btn-primary">Download package »</a>
+                        or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn btn-primary">Git Clone»</a>
+                        or read the <a target="_blank" href="{$url.base}/API" class="btn btn-success">Documentation »</a></p>
 				</div>
 			</div> <!-- /row -->
 
 			<div id="overview">
 				<div class="row">
-					<div class="span16 columns"><h1>SIFO features</h1></div>
+					<div class="span12 columns"><h1>SIFO features</h1></div>
 				</div>
 
 				<div class="row">
-					<div class="span8 columns">
+					<div class="span6 columns">
 						<h3>MVC pattern</h3>
 
 						<p>SIFO uses the MVC pattern to sepparate your project in 3 different areas:</p>
@@ -53,19 +55,19 @@
 						<p>If you never used this pattern before, you should start now if you don't want to
 							become insane once your applications start to grow. Don't feel overwhelmed, it's easy.</p>
 					</div>
-					<div class="span8 columns">
+					<div class="span6 columns">
 						<img src="{$url.static}/docs/mvc.png" />
 					</div>
 				</div>
 				<div class="row">
-					<div class="span8 columns">
+					<div class="span6 columns">
 						<h3>Scalable</h3>
 
 						<p>SIFO has been developed thinking in scalability and performance. You can configure
 							right from the beginning features like load balancing, separate your static and
 							dynamic content or add advanced caching to your pages.</p>
 					</div>
-					<div class="span8 columns">
+					<div class="span6 columns">
 						<h3>Proved</h3>
 						<p>Well proved, running since year 2008 and used in a large base of heterogeneous web projects with very different needs and technologies.</p>
 						<p>Powers big sites, some of them with up to 16M page views/month (and raising!)</p>
@@ -73,7 +75,7 @@
 				</div>
 
 				<div class="row">
-					<div class="span11 columns">
+					<div class="span8 columns">
 						<h3>Inheritance across different projects</h3>
 
 						<p>Let's say you have several sites running. Doesn't make sense to you that a project
@@ -86,12 +88,12 @@
 							Why coding it again or even pasting it for yet another project? Reuse!</p>
 						<p>You can run unrelated projects that share common base code.</p>
 					</div>
-					<div class="span5 columns">
+					<div class="span4 columns">
 						<img class="nomargin" src="{$url.static}/docs/tree.png" />
 					</div>
 				</div>
 				<div class="row">
-					<div class="span11 columns">
+					<div class="span8 columns">
 						<h3>Environment aware</h3>
 
 						<p>Via a single file, the mighty <code>config/domains.config.php</code>, you define the behaviour
@@ -109,11 +111,11 @@
 						</ul>
 
 					</div>
-					<div class="span5 columns">
+					<div class="span4 columns">
 						<img src="{$url.static}/docs/servers.png" />
 					</div>
 					<div class="row">
-						<div class="span16 columns">
+						<div class="span12 columns">
 							<p><em>Portion of the file</em>:</p>
 
 							<pre class="prettyprint"><code>$config['sifo.me'] = array(
@@ -156,10 +158,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="span8 columns">
+					<div class="span6 columns">
 						<img src="{$url.static}/docs/router.jpg" />
 					</div>
-					<div class="span8 columns">
+					<div class="span6 columns">
 						<h3>Nice URLs and Routing</h3>
 
 						<p>When you type an URL there is a mapping between what you are typing in the address bar
@@ -172,7 +174,7 @@
 
 				</div>
 				<div class="row">
-					<div class="span5 columns">
+					<div class="span4 columns">
 						<h3>Powerful Debug</h3>
 
 						<p>The SIFO debug contains a lot of interesting stuff to debug your application:</p>
@@ -203,12 +205,12 @@
 								</ul></li>
 						</ul>
 					</div>
-					<div class="span11 columns">
+					<div class="span8 columns">
 						<img src="{$url.static}/docs/debug.jpg" />
 					</div>
 				</div>
 				<div class="row">
-					<div class="span16 columns">
+					<div class="span12 columns">
 						<h3>Multilanguage</h3>
 
 						<p>Almost every SIFO programmer has multi-lingual projects, because it is very easy.
@@ -241,7 +243,7 @@ Russian: &lt;h1&gt;Добро пожаловать на Sifo!&lt;/h1&gt;
 				</div>
 
 				<div class="row">
-					<div class="span5 columns">
+					<div class="span4 columns">
 						<h3>Lazy Loading</h3>
 
 						<p><strong>The less classes are in-memory, the better</strong>. We stick to the principle of loading
@@ -252,7 +254,7 @@ Russian: &lt;h1&gt;Добро пожаловать на Sifo!&lt;/h1&gt;
 							play with the latest unstable library in local, while keeping the stable one in production.
 							That's defined in <code>libraries.config.php</code></p>
 					</div>
-					<div class="span11 columns">
+					<div class="span8 columns">
 						<p>A piece of <code>config/libraries.config.php</code>:</p>
 
 						<pre class="prettyprint"><code>$config['classes_always_preloaded'] = array(
@@ -280,19 +282,19 @@ protected $include_classes = array( 'Filter' );
 					</div>
 				</div>
 				<div class="row">
-					<div class="span11 columns">
+					<div class="span8 columns">
 						<h3>Multiple databases flavour</h3>
 
 						<p>From <strong>Key-values</strong> like Redis to common RDBMS like Mysql, Postgres, Oracle, Firebird or even SQLite.
 							You can choose to use Mysql PDO or any of the ADODB drivers. For redis, Predis
 							is an excellent solution we use a lot.</p>
 					</div>
-					<div class="span5 columns">
+					<div class="span4 columns">
 						<img class="nomargin" src="{$url.static}/docs/databases.png" />
 					</div>
 				</div>
 				<div class="row">
-					<div class="span11 columns">
+					<div class="span8 columns">
 						<h3>Command Line support</h3>
 
 						<p>Yes, you like to code your cron jobs in PHP, so do we. Take profit of your existing
@@ -301,13 +303,13 @@ protected $include_classes = array( 'Filter' );
 							builds the help for you. If you are interested in receiving email reporting is also
 							already done.</p>
 					</div>
-					<div class="span5 columns">
+					<div class="span4 columns">
 						<img class="nomargin" src="{$url.static}/docs/cli.png" />
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="span11 columns">
+					<div class="span8 columns">
 						<h3>Dynamic/static distinction</h3>
 
 						<p>You never know what is going to happen. Putting your static files in a different
@@ -316,7 +318,7 @@ protected $include_classes = array( 'Filter' );
 							to separate dynamic (PHP) from static files (CSS, images, media).
 						</p>
 					</div>
-					<div class="span5 columns">
+					<div class="span4 columns">
 						<img class="nomargin" src="{$url.static}/docs/statics.png" />
 					</div>
 				</div>
@@ -324,7 +326,7 @@ protected $include_classes = array( 'Filter' );
 				<h1>And more...</h1>
 
 				<div class="row">
-					<div class="span11 columns">
+					<div class="span8 columns">
 						<h3>Lots of helpful classes</h3>
 
 						<p>Many projects share the same needs. Do you need to send nice emails? Geo-localise
@@ -348,7 +350,7 @@ protected $include_classes = array( 'Filter' );
 							here it's time to get a little bit deeper yourself guided by the documentation. It might
 							be a little poor, if you'd like anything to be added or have suggestions, please <a href="https://github.com/inbox/new/alombarte">contact me</a> via GitHub.</p>
 					</div>
-					<div class="span5 columns">
+					<div class="span4 columns">
 						<img src="{$url.static}/docs/libraries.png" />
 					</div>
 				</div>

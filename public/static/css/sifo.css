@@ -76,11 +76,11 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
 	#overview .float.right { float: right; }
 	#overview .float.left { float: left; }
 
-#documentation h1 { border-bottom: 1px solid #DDD; }
-#documentation h2 { color:#190; }
+#documentation h1 {  padding-bottom: 10px; }
+#documentation h2 { color:#E30; padding-bottom: 5px; font-size: 20px; }
 #documentation strong {}
 
-#navigation_box { background-color: #CDF; padding: 20px; margin: auto; color: #444;
+#navigation_box { background-color: #E1E1E1; padding: 20px; margin: auto; color: #444;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	-o-border-radius: 8px;
