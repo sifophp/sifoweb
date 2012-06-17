@@ -76,14 +76,14 @@ And you can define the type of element:
 
 Anywhere in your PHP code use this feature as follows:
 
-    \Sifo\Debug::log( 'This message will be shown in browser console.', 'log', 'html' );
+    \Sifo\Debug::log( 'This message will be shown in browser console.', 'log', 'browser_console' );
 
 __Output:__
 
 ![Simple example](<url:static>/docs/API/debugmessages_simple_example.png)
 
     $variable = 'Variable content';
-    \Sifo\DebugMessages::log( $variable );
+    \Sifo\DebugMessages::log( $variable, 'log', 'browser_console' );
 
 __Output:__
 
@@ -94,7 +94,7 @@ __Output:__
         'second' => 'pear',
         'totals' => array( 33, 22 )
     );
-    \Sifo\DebugMessages::log( $variable_array );
+    \Sifo\DebugMessages::log( $variable_array, 'log', 'browser_console' );
 
 __Output:__
 
