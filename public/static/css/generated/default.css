@@ -13,9 +13,16 @@
 
 /* END bootstrap-2.0.4.min.css *//* START FILE sifo.css */
 
-section { padding-top: 60px; }
+body { font-family: 'Droid Sans', sans-serif !important;
+    font-size: 14px !important;
+}
+section { padding-top: 60px; }
+
 pre code { background-color: black; color: #FFF; } /* Prettify code blocks are overriden by Bootstrap, correct */
 
+#footer {
+    margin-top: 30px;
+}
 #footer p.right {
 	float: right;
 }
@@ -91,18 +98,42 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
 	#overview .float.right { float: right; }
 	#overview .float.left { float: left; }
 
+#documentation {  }
 #documentation h1 {  padding-bottom: 10px; }
 #documentation h2 { color:#E30; padding-bottom: 5px; font-size: 20px; }
 #documentation strong {}
 
-#navigation_box { background-color: #E1E1E1; padding: 20px; margin: auto; color: #444;
+#navigation_box { padding: 20px; margin: auto; color: #444;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	-o-border-radius: 8px;
 	-ms-border-radius: 8px;
 	-khtml-border-radius: 8px;
 	border-radius: 8px;
+    background-color: #EFEFEF;
 	}
+
+#navigation_box ul { list-style: none; padding: 0; margin: 0}
+#navigation_box li { list-style: none; }
+#navigation_box a { color: #444; font-size: 14px; display: block; padding: 5px; }
+    #navigation_box li.selected a { color: #6999ee; font-weight:bold; }
+    #navigation_box li a i { float: right; }
+
+#navigation_box a i.icon-chevron-right {
+    background-position: -453px -70px;
+    background-color: #CCC;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+#navigation_box li.selected a i.icon-chevron-right,
+#navigation_box li a:hover i.icon-chevron-right
+{
+    background-color: #6999ee;
+}
+
+
+
 
 /* END sifo.css *//* START FILE sunburst.css */
 

@@ -4,22 +4,43 @@
 <div class="container" id="documentation">{* Use container-fluid class for non-fixed layout*}
 		<section id="{$section}">
 			<div class="row">
+{                if count( $docs ) > 0}
                 <div class="span4 columns">
                     <div id="navigation_box">
-                        <h2>Navigation</h2>
-                        <p>You are here: <em>{$path|ucfirst}</em></p>
                         <nav>
                             <ul>
-                                {					foreach from=$docs item=d}
-                                <li><a href="{$url.base}/{$d}">
-                                    {if $section==$d}<strong>{$d|ucfirst}</strong>{else}{$d|ucfirst}{/if}
-                                </a></li>
-                                {					/foreach}
+{       					foreach from=$docs item=d}
+                                <li{if $section==$d} class="selected"{/if}><a href="{$url.base}/{$d}">
+                                    {$d|regex_replace:"@(.*)/@":''|replace:'-':' '|ucfirst}
+                                    <i class="icon-chevron-right icon-white"></i>
+                                </a>
+                                </li>
+{       					/foreach}
                             </ul>
                         </nav>
                     </div>
                 </div>
-				<div class="span8 columns">
+{                /if}
+				<div class="{if count( $docs ) > 0}span8{else}span12{/if} columns">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{$url.base}">Home</a> <span class="divider">/</span>
+                        </li>
+{                           assign var=complete value=''}
+{       					foreach $path as $p}
+{                           assign var=complete value="$complete/$p"}
+{                  if $p@last}
+                        <li class="active">{$p|ucfirst|replace:'-':' '}</li>
+{                  else}
+                        <li><a href="{$url.base}{$complete}">{$p|ucfirst|replace:'-':' '}</a> <span class="divider">/</span></li>
+{                  /if}
+
+
+
+{       					/foreach}
+
+                    </ul>
+
 {					if isset($content)}{$content}{/if}
 				</div>
 

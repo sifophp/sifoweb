@@ -8,7 +8,11 @@
 	<meta name="keywords" content="{$metadata.keywords}" />
 
 	<link rel="shortcut icon" href="{$url.base}/favicon.ico" type="image/x-icon" />
-	{literal}
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+
+
+{literal}
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];

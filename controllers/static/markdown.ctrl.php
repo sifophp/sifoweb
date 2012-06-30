@@ -54,7 +54,7 @@ class StaticMarkdownController extends SharedFirstlevelController
 			$this->assign( 'section', $path );
 			$this->assign( 'docs', $this->_formatFilesForMenu( $docs ) );
 
-			$this->assign( 'path', $path );
+			$this->assign( 'path', explode( '/', $path ) );
 		}
 		else
 		{
