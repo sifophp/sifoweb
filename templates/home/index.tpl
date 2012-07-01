@@ -1,5 +1,6 @@
 {extends file=$_tpls['layout/basic.tpl']}
 {block name='content'}
+{*
 <div id="masthead">
 	<div class="inner">
         <div class="container">
@@ -11,13 +12,16 @@
         </div> <!-- /container -->
 	</div>
 </div>
-
+*}
 <div id="quickstart">
 	<div class="container">
 		<section id="introduction">
 			<div class="row">
 				<div class="span4 columns">
-					<img alt="SIFO logo" src="{$url.static}/css/images/logo.jpg" /><br/>
+                    <p>You can download, clone or fork the project from Github.</p>
+                    <p><a target="_blank" href="https://github.com/alombarte/SIFO/tags" class="btn btn-success">Download <i class="icon-circle-arrow-down icon-white"></i></a></p>
+                    <p><a target="_blank" href="https://github.com/alombarte/SIFO" class="btn btn-primary">Clone <i class="icon-refresh icon-white"></i></a></p>
+                     <p><a target="_blank" href="{$url.base}/API" class="btn btn-primary">Documentation <i class="icon-book icon-white"></i></a></p>
 				</div>
 				<div class="span8 columns">
 
@@ -28,10 +32,7 @@
 						<p>SIFO is free and very easy to use. Contains a lot of <strong>libraries and classes</strong> that resolve your
 							<strong>basic problems</strong> and allow you to focus in your business logic, at a very low learning curve. If there is a curve :)</p>
 					</div>
-					<p>You can download, clone or fork the project from Github.</p>
-					<p><a target="_blank" href="https://github.com/alombarte/SIFO/tags" class="btn btn-primary">Download package »</a>
-                        or <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn btn-primary">Git Clone»</a>
-                        or read the <a target="_blank" href="{$url.base}/API" class="btn btn-success">Documentation »</a></p>
+
 				</div>
 			</div> <!-- /row -->
 

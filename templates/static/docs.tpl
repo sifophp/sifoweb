@@ -1,7 +1,7 @@
 {extends file=$_tpls['layout/basic.tpl']}
 
 {block name='content'}
-<div class="container" id="documentation">{* Use container-fluid class for non-fixed layout*}
+{* Use container-fluid class for non-fixed layout*}
 		<section id="{$section}">
 			<div class="row">
 {                if count( $docs ) > 0}
@@ -47,5 +47,4 @@
 
 			  </div><!-- /row -->
 		  </section>
-</div> {* EOF .container *}
 {/block}

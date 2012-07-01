@@ -5,15 +5,15 @@
 {	$modules.head}
 </head>
 <body onload="prettyPrint()">
-	<div id="header">
-	{	block name='header'}
-	{		$modules.header}
-	{	/block}
-	</div>
+    <div class="container" id="{$ctrl}">
+        <div id="header">
+            {	block name='header'}
+            {		$modules.header}
+            {	/block}
+        </div>
+{       block name='content'}{/block}
+    </div> {* EOF .container *}
 
-	{block name='content'}
-	{/block}
-	
 	<div id="footer">
 		{$modules.footer}
 	</div>

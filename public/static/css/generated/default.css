@@ -16,10 +16,12 @@
 body { font-family: 'Droid Sans', sans-serif !important;
     font-size: 14px !important;
 }
-section { padding-top: 60px; }
+section {}
 
 pre code { background-color: black; color: #FFF; } /* Prettify code blocks are overriden by Bootstrap, correct */
-
+#logo { margin-top: 10px;}
+#logo .span10 { text-align: right; }
+#logo .span10 a { margin-top: 10px; }
 #footer {
     margin-top: 30px;
 }
@@ -92,17 +94,16 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
 		-khtml-border-radius: 8px;
 		border-radius: 8px;
 	}
-	#overview .row { margin-top: 60px; }
 	#overview img { margin-top: 40px }
 	#overview img.nomargin { margin-top:0;}
 	#overview .float.right { float: right; }
 	#overview .float.left { float: left; }
 
-#documentation .breadcrumb { font-size: 11px; padding: 5px 10px; }
-    #documentation .breadcrumb .divider { padding: 0 1px; }
-#documentation h1 {  padding-bottom: 10px; }
-#documentation h2 { color:#E30; padding-bottom: 5px; font-size: 20px; }
-#documentation strong {}
+#StaticMarkdown .breadcrumb { font-size: 11px; padding: 5px 10px; }
+    #StaticMarkdown .breadcrumb .divider { padding: 0 1px; }
+#StaticMarkdown h1 {  padding-bottom: 10px; }
+#StaticMarkdown h2 { color:#E30; padding-bottom: 5px; font-size: 20px; }
+#StaticMarkdown strong {}
 
 #navigation_box { padding: 20px; margin: auto; color: #444;
 	-moz-border-radius: 8px;
@@ -114,6 +115,7 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
     background-color: #EFEFEF;
 	}
 
+.navbar .nav .active > a, .navbar .nav .active > a:hover  { background-color: #28B };
 #navigation_box ul { list-style: none; padding: 0; margin: 0}
 #navigation_box li { list-style: none; }
 #navigation_box a { color: #444; font-size: 14px; display: block; padding: 5px; }
