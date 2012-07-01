@@ -51,10 +51,12 @@ class StaticMarkdownController extends SharedFirstlevelController
 			// Get only immediate items, not the whole tree:
 			$docs = $dir->getList( dirname( $file ), array( 'md' ) );
 
-			$this->assign( 'section', $path );
+			$path = explode( '/', $path );
 			$this->assign( 'docs', $this->_formatFilesForMenu( $docs ) );
+			$this->assign( 'path', $path );
+			$section = array_shift( $path );
+			$this->assign( 'section', $section );
 
-			$this->assign( 'path', explode( '/', $path ) );
 		}
 		else
 		{

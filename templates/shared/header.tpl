@@ -10,7 +10,7 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
     {			foreach from=$menu_items item=item}
-                    <li{if $path==$item} class="active"{/if}><a href="{$url.base}/{$item}">{$item|replace:'-':' '|ucwords}</a></li>
+                    <li{if $section==$item} class="active"{/if}><a href="{$url.base}/{$item}">{$item|replace:'-':' '|ucwords}</a></li>
     {			/foreach}
                     <li><a href="https://github.com/alombarte/SIFO/issues">Issues</a></li>
                     <li><a href="https://groups.google.com/forum/?fromgroups#!forum/sifophp">Questions?</a></li>

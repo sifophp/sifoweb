@@ -15,7 +15,9 @@ class SharedHeaderController extends \Sifo\Controller
 
 		$this->setLayout( 'shared/header.tpl' );
 		$params = $this->getParams();
-		$this->assign( 'path', $params['path'] );
+		$path = explode( '/', $params['path'] );
+		$section = array_shift( $path );
+		$this->assign( 'section', $section );
 		$this->assign( 'menu_items', $menu_items );
 
 	}

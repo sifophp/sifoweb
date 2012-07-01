@@ -6,11 +6,29 @@
 			<div class="row">
 {                if count( $docs ) > 0}
                 <div class="span4 columns">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{$url.base}">Home</a> <span class="divider">/</span>
+                        </li>
+                        {                           assign var=complete value=''}
+                        {       					foreach $path as $p}
+                        {                           assign var=complete value="$complete/$p"}
+                        {                  if $p@last}
+                        <li class="active">{$p|ucfirst|replace:'-':' '}</li>
+                        {                  else}
+                        <li><a href="{$url.base}{$complete}">{$p|ucfirst|replace:'-':' '}</a> <span class="divider">/</span></li>
+                        {                  /if}
+
+
+
+                        {       					/foreach}
+
+                    </ul>
                     <div id="navigation_box">
                         <nav>
                             <ul>
 {       					foreach from=$docs item=d}
-                                <li{if $section==$d} class="selected"{/if}><a href="{$url.base}/{$d}">
+                                <li{if implode('/',$path)==$d} class="selected"{/if}><a href="{$url.base}/{$d}">
                                     {$d|regex_replace:"@(.*)/@":''|replace:'-':' '|ucfirst}
                                     <i class="icon-chevron-right icon-white"></i>
                                 </a>
@@ -22,24 +40,7 @@
                 </div>
 {                /if}
 				<div class="{if count( $docs ) > 0}span8{else}span12{/if} columns">
-                    <ul class="breadcrumb">
-                        <li>
-                            <a href="{$url.base}">Home</a> <span class="divider">/</span>
-                        </li>
-{                           assign var=complete value=''}
-{       					foreach $path as $p}
-{                           assign var=complete value="$complete/$p"}
-{                  if $p@last}
-                        <li class="active">{$p|ucfirst|replace:'-':' '}</li>
-{                  else}
-                        <li><a href="{$url.base}{$complete}">{$p|ucfirst|replace:'-':' '}</a> <span class="divider">/</span></li>
-{                  /if}
 
-
-
-{       					/foreach}
-
-                    </ul>
 
 {					if isset($content)}{$content}{/if}
 				</div>
