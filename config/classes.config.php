@@ -16,7 +16,7 @@ $config['Cookie']['Sifo'] = 'libs/Sifo/Cookie.php';
 $config['Crypt']['Sifo'] = 'libs/Sifo/Crypt.php';
 $config['CssPacker']['Sifo'] = 'libs/Sifo/CssPacker.php';
 $config['Database']['Sifo'] = 'libs/Sifo/Database.php';
-$config['DebugMessages']['Sifo'] = 'libs/Sifo/Debug/Messages.php';
+$config['Debug']['Sifo'] = 'libs/Sifo/Debug.php';
 $config['DebugMysql']['Sifo'] = 'libs/Sifo/Debug/Mysql.php';
 $config['DebugSearch']['Sifo'] = 'libs/Sifo/Debug/Search.php';
 $config['Dir']['Sifo'] = 'libs/Sifo/Dir.php';
@@ -49,6 +49,6 @@ $config['Urls']['Sifo'] = 'libs/Sifo/Urls.php';
 $config['View']['Sifo'] = 'libs/Sifo/View.php';
 $config['HomeIndexController']['Sifoweb'] = 'instances/sifoweb/controllers/home/index.ctrl.php';
 $config['SharedFirstlevelController']['Sifoweb'] = 'instances/sifoweb/controllers/shared/firstlevel.ctrl.php';
-$config['SharedHeaderController']['Sifoweb'] = 'instances/sifoweb/controllers/shared/header.ctrl.php';
+$config['SharedHeaderFooterController']['Sifoweb'] = 'instances/sifoweb/controllers/shared/headerFooter.ctrl.php';
 $config['StaticMarkdownController']['Sifoweb'] = 'instances/sifoweb/controllers/static/markdown.ctrl.php';
 

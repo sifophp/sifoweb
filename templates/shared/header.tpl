@@ -1,6 +1,6 @@
 <div id="logo" class="row">
     <div class="span2">
-        <a href="{$url.base}" title="Sifo, PHP5 framework for real-world web applications"><img alt="SIFO logo" src="{$url.static}/css/images/logo_small.png" /></a>
+        <a href="{$url.base}" title="Sifo, PHP5 framework for real-world web applications"><img alt="SIFO logo" src="{$url.static}/css/images/logo_small_red.png" /></a>
     </div>
     <div class="span10">
         <a target="_blank" href="https://github.com/alombarte/SIFO/tags" class="btn btn-success">Download <i class="icon-circle-arrow-down icon-white"></i></a>
@@ -17,7 +17,6 @@
                     <li{if $section==$item} class="active"{/if}><a href="{$url.base}/{$item}">{$item|replace:'-':' '|ucwords}</a></li>
     {			/foreach}
                     <li><a href="https://github.com/alombarte/SIFO/issues">Issues</a></li>
-                    <li><a href="https://groups.google.com/forum/?fromgroups#!forum/sifophp">Questions?</a></li>
                 </ul>
             </div>
         </div>

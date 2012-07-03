@@ -13,114 +13,197 @@
 
 /* END bootstrap-2.0.4.min.css *//* START FILE sifo.css */
 
-body { font-family: 'Droid Sans', sans-serif !important;
+body {
+    font-family: 'Droid Sans', sans-serif !important;
     font-size: 14px !important;
 }
-section {}
 
-pre code { background-color: black; color: #FFF; } /* Prettify code blocks are overriden by Bootstrap, correct */
-#logo { margin-top: 10px;}
-#logo .span10 { text-align: right; }
-#logo .span10 a { margin-top: 10px; }
+section {
+}
+
+pre code {
+    background-color: black;
+    color: #FFF;
+}
+
+/* Prettify code blocks are overriden by Bootstrap, correct */
+#logo {
+    margin-top: 10px;
+}
+
+#logo .span10 {
+    text-align: right;
+}
+
+#logo .span10 a {
+    margin-top: 10px;
+}
+
 #footer {
     margin-top: 30px;
-}
-#footer p.right {
-	float: right;
-}
-#masthead, #footer {
-  background-color: #049cd9;
-  background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#004D9F), to(#049cd9));
-  background-image: -webkit-linear-gradient(#004D9F, #049cd9);
-  background-image: -moz-linear-gradient(#004D9F, #049cd9);
-  background-image: -o-linear-gradient(top, #004D9F, #049cd9);
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#004D9F), to(#049cd9));
-  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#004D9F', EndColorStr='#049cd9', GradientType=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#004D9F', EndColorStr='#049cd9', GradientType=0))";
-}
-#masthead div.inner, #footer div.inner {
-  /*background: transparent url(../img/grid-18px.png) top center;*/
-  padding: 45px 0;
-  -webkit-box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-#masthead h1,
-#footer h1,
-#masthead p,
-#footer p {
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.3);
-}
-#masthead p a,
-#footer p {
-  color: #fff;
+    border-top: 1px solid #000;
 }
 
 #footer a {
-    color: #99BBFF;
-}
-#masthead {
-  margin-top: 20px;
-}
-#masthead h1,
-#masthead p {
-  text-align: center;
-  margin-bottom: 9px;
-}
-#masthead h1 {
-  font-size: 54px;
-  line-height: 1;
-  text-shadow: 0 1px 2px rgba(0,0,0,.5);
-}
-#masthead p {
-  font-weight: 300;
-}
-#masthead p.lead {
-  font-size: 20px;
-  line-height: 27px;
+    color: #777;
 }
 
-#quickstart textarea { width: 100%; }
-.teaser p { line-height: 30px; font-size: 18px; }
+#footer .color {
+    color: #28B;
+}
 
-#overview {  }
-	#overview h1 {  background-color: #CDF; padding: 20px; margin: auto; color: #444;
-		-moz-border-radius: 8px;
-		-webkit-border-radius: 8px;
-		-o-border-radius: 8px;
-		-ms-border-radius: 8px;
-		-khtml-border-radius: 8px;
-		border-radius: 8px;
-	}
-	#overview img { margin-top: 40px }
-	#overview img.nomargin { margin-top:0;}
-	#overview .float.right { float: right; }
-	#overview .float.left { float: left; }
+#footer p.right {
+    float: right;
+}
 
-#StaticMarkdown .breadcrumb { font-size: 11px; padding: 5px 10px; }
-    #StaticMarkdown .breadcrumb .divider { padding: 0 1px; }
-#StaticMarkdown h1 {  padding-bottom: 10px; }
-#StaticMarkdown h2 { color:#E30; padding-bottom: 5px; font-size: 20px; }
-#StaticMarkdown strong {}
+#footer .inner {
+    background: #111;
+    border-top: 1px solid #222;
+    color: white;
+}
 
-#navigation_box { padding: 20px; margin: auto; color: #444;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-o-border-radius: 8px;
-	-ms-border-radius: 8px;
-	-khtml-border-radius: 8px;
-	border-radius: 8px;
+#colophon {
+    border-top: 1px solid black;
+}
+
+#colophon .inner {
+    background-color: #222;
+    border-top: 1px solid #555;
+    padding: 20px;
+}
+
+#colophon h3 {
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#footer .shortcut {
+    width: 49%;
+    margin: 0px;
+    display: inline-block;
+    list-style: none;
+}
+
+#footer .shortcut li {
+    margin-bottom: 10px;
+}
+
+#footer_notes {
+    background-color: #111;
+    border-top: 1px solid #000;
+}
+
+#footer_notes .inner {
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+#quickstart textarea {
+    width: 100%;
+}
+
+.teaser p {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+#overview {
+}
+
+#overview h1 {
+    background-color: #CDF;
+    padding: 20px;
+    margin: auto;
+    color: #444;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#overview img {
+    margin-top: 40px
+}
+
+#overview img.nomargin {
+    margin-top: 0;
+}
+
+#overview .float.right {
+    float: right;
+}
+
+#overview .float.left {
+    float: left;
+}
+
+#StaticMarkdown .breadcrumb {
+    font-size: 11px;
+    padding: 5px 10px;
+}
+
+#StaticMarkdown .breadcrumb .divider {
+    padding: 0 1px;
+}
+
+#StaticMarkdown h1 {
+    padding-bottom: 10px;
+}
+
+#StaticMarkdown h2 {
+    color: #E30;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+#StaticMarkdown strong {
+}
+
+#navigation_box {
+    padding: 20px;
+    margin: auto;
+    color: #444;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
     background-color: #EFEFEF;
-	}
+}
 
-.navbar .nav .active > a, .navbar .nav .active > a:hover  { background-color: #28B };
-#navigation_box ul { list-style: none; padding: 0; margin: 0}
-#navigation_box li { list-style: none; }
-#navigation_box a { color: #444; font-size: 14px; display: block; padding: 5px; }
-    #navigation_box li.selected a { color: #6999ee; font-weight:bold; }
-    #navigation_box li a i { float: right; }
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+    background-color: #28B
+}
+
+;
+#navigation_box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+#navigation_box li {
+    list-style: none;
+}
+
+#navigation_box a {
+    color: #444;
+    font-size: 14px;
+    display: block;
+    padding: 5px;
+}
+
+#navigation_box li.selected a {
+    color: #6999ee;
+    font-weight: bold;
+}
+
+#navigation_box li a i {
+    float: right;
+}
 
 #navigation_box a i.icon-chevron-right {
     background-position: -453px -70px;
@@ -130,8 +213,7 @@ pre code { background-color: black; color: #FFF; } /* Prettify code blocks are o
 }
 
 #navigation_box li.selected a i.icon-chevron-right,
-#navigation_box li a:hover i.icon-chevron-right
-{
+#navigation_box li a:hover i.icon-chevron-right {
     background-color: #6999ee;
 }
 

@@ -1,6 +1,6 @@
 Working with Directories
 ========================
-The `DirectoryList` class returns the content inside the given path. You can decide if you want to see only files, folder and files, and set some filters to see only a subset of the content.
+> The `DirectoryList` class returns the content inside the given path. You can decide if you want to see only files, folder and files, and set some filters to see only a subset of the content.
 
 The content returned by the `DirectoryList` can be looped and use internal [SPL] functions to retrieve interesting information.
 
