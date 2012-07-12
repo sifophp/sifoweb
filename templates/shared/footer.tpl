@@ -18,20 +18,13 @@
 
                     <p>Do you use the framework? Fork it and suggest us improvements. Or maybe you are starter,
                     you can also help improving the documentation. If you want to help get in touch!</p>
-                    <ul class="social-icons-container">
-                        <li><a href="javascript:;" class="social-icon social-icon-twitter"> Twitter </a></li>
-                        <li><a href="javascript:;" class="social-icon social-icon-googleplus"> Google + </a></li>
-                        <li><a href="javascript:;" class="social-icon social-icon-facebook"> Facebook </a></li>
-                    </ul>
                 </div>
-                <div class="span4"><h3><span class="color">::</span> Subscribe and get updates</h3>
+                <div class="span4"><h3><span class="color">::</span> Get in touch</h3>
 
-                    <p>Subscribe to our newsletter and get exclusive deals you wont find anywhere else straight to your
-                        inbox!</p>
-
-                    <form><input type="text" name="subscribe_email" placeholder="Your Email"> <br>
-                        <button class="btn ">Subscribe</button>
-                    </form>
+                    <ul class="social-icons-container">
+                        <li><a href="http://twitter.com/alombarte" class="social-icon social-icon-twitter"> Twitter </a></li>
+                        <li><a href="https://groups.google.com/group/sifophp/" class="social-icon social-icon-google"> Google Groups</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
