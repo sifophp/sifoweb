@@ -17,24 +17,45 @@
 	<div class="container">
 		<section id="introduction">
 			<div class="row">
-				<div class="span4 columns">
+				<div class="span6 columns">
+
+                    <div class="teaser well">
+                        <p><a href="http://sifo.me">SIFO</a> is a well-proben open source PHP5 framework currently running on several
+                        sites, from small installations to large websites with multiple servers.</p>
+
+                        <p>SIFO is free and very easy to use. Contains a lot of <strong>libraries and classes</strong> that resolve your
+                        <strong>basic problems</strong> and allow you to focus in your business logic, at a very low learning curve. If there is a curve :)</p>
+                    </div>
+
+                </div>
+                <div class="span6 columns">
+{                   if $recent_commits}
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                        <tr>
+                            <th><h4>Recent commits on SIFO master</h4></th>
+                            <th width="20%">When?</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+{                       foreach $recent_commits as $commit}
+                        <tr>
+                            <td>
+                            <a title="See commit on github" href="{$commit.link}">{$commit.title}</a> by
+                            <small><a title="See author profile on github" href="{$commit.author_url}">{$commit.author}</a></small>
+                            </td>
+                            <td>{$commit.updated|date_format:'d-m-Y H:i'}</td>
+                        </tr>
+{                       /foreach}
+                        </tbody>
+                    </table>
+                    <p class="pull-right"><a href="https://github.com/alombarte/SIFO/commits/master">+ More commits</a></p>
+{                   else}
                     <p>You can download, clone or fork the project from Github.</p>
                     <p><a target="_blank" href="https://github.com/alombarte/SIFO/tags" class="btn btn-success">Download <i class="icon-circle-arrow-down icon-white"></i></a></p>
-                    <p><a target="_blank" href="https://github.com/alombarte/SIFO" class="btn btn-primary">Clone <i class="icon-refresh icon-white"></i></a></p>
-                     <p><a target="_blank" href="{$url.base}/API" class="btn btn-primary">Documentation <i class="icon-book icon-white"></i></a></p>
-				</div>
-				<div class="span8 columns">
-
-					<div class="teaser well">
-						<p><a href="http://sifo.me">SIFO</a> is a well-proben open source PHP5 framework currently running on several
-							sites, from small installations to large websites with multiple servers.</p>
-
-						<p>SIFO is free and very easy to use. Contains a lot of <strong>libraries and classes</strong> that resolve your
-							<strong>basic problems</strong> and allow you to focus in your business logic, at a very low learning curve. If there is a curve :)</p>
-					</div>
-
-				</div>
-			</div> <!-- /row -->
+{                   /if}
+                </div>
+            </div> <!-- /row -->
 
 			<div id="overview">
 				<div class="row">

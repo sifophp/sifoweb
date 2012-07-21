@@ -3,7 +3,9 @@
         <a href="{$url.base}" title="Sifo, PHP5 framework for real-world web applications"><img alt="SIFO logo" src="{$url.static}/css/images/logo_small_red.png" /></a>
     </div>
     <div class="span10">
-        <a target="_blank" href="https://github.com/alombarte/SIFO/tags" class="btn btn-success">Download <i class="icon-circle-arrow-down icon-white"></i></a>
+        <a target="_blank" href="{$url.base}/API" class="btn">Documentation <i class="icon-book"></i></a>
+        <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn">Clone <i class="icon-refresh"></i></a>
+        <a target="_blank" href="{$url.base}/download" class="btn btn-success">Download <i class="icon-circle-arrow-down icon-white"></i></a>
     </div>
 </div>
 
@@ -16,7 +18,6 @@
     {			foreach from=$menu_items item=item}
                     <li{if $section==$item} class="active"{/if}><a href="{$url.base}/{$item}">{$item|replace:'-':' '|ucwords}</a></li>
     {			/foreach}
-                    <li><a href="https://github.com/alombarte/SIFO/issues">Issues</a></li>
                 </ul>
             </div>
         </div>
