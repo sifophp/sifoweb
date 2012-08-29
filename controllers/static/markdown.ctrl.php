@@ -81,15 +81,15 @@ class StaticMarkdownController extends SharedFirstlevelController
 		$paths = $cache->get( self::DOCS_LIST_CACHE_KEY );
 
 
-		if ( false === $paths || $this->hasDebug() )
+		if ( false === $paths )
 		{
 			$parse_folder = ROOT_PATH . '/instances/sifoweb/docs';
 			$dir = new \Sifo\DirectoryList();
 			$files = $dir->getRecursiveList( $parse_folder, true, array( 'md' ) );
 			$paths = $this->_formatFilesForMenu( $files );
 
-			// Store full dir scan for 5 minutes.
-			$cache->set( self::DOCS_LIST_CACHE_KEY, $paths, 300 );
+			// Store full dir scan for 1 minute.
+			$cache->set( self::DOCS_LIST_CACHE_KEY, $paths, 60 );
 		}
 
 		return $paths;

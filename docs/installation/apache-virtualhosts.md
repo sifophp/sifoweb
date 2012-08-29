@@ -17,6 +17,9 @@ The most common paths are:
 ### VirtualHost content ###
 Once you've located where you have to write the content and how, this is the content you need to write. Adapt paths to your installation:
 
+    # Do not forget this line!
+    NameVirtualHost *:80
+
 	# Fake CDN. Specific entry to serve static content such as CSS, JS or Images
 	<VirtualHost *:80>
 	        ServerName static.yourproject.com

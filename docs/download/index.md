@@ -26,7 +26,7 @@ online won't make any sense to you.
 
 In case you want to continue, you can find the latest PHP 5.2 framework here:
 
- * Package @ Github: <https://github.com/alombarte/SIFO/zipball/sifo-1.9>
+ * Package @ Github: <https://github.com/alombarte/SIFO/zipball/sifo-1.9> `very old!!`
 
 [downloading a tarball or zip]: https://github.com/alombarte/SIFO/tags "Download SIFO"
 [SIFO]: http://sifo.me

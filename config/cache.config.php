@@ -1,7 +1,7 @@
 <?php
 
 // Sets if memcache is active or not. If disabled, the system will cache to disk.
-$config['active'] = true;
+$config['active'] = false;
 
 // Whether to use the Memcache client, or the new Memcached client.
 $config['client'] = 'Memcache'; // Memcache or Memcached (newer).
