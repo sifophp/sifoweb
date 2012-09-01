@@ -10,7 +10,7 @@ Of course your application can have models extending from different classes and 
 
 **If you are a Mysql-only guy you'll probably want to use `MysqlModel` instead of `Model`. This page talks only about the `Model` class (multidriver)**
 
-If, on the contrary, your application is using a distinct RDBM than Mysql (see supported databases) this is the class you have to extend from.
+If, on the contrary, your application is using a distinct RDBM than Mysql [see supported databases](#databases) this is the class you have to extend from.
 
 How it works (`Model` only)
 ---------------------------
@@ -89,7 +89,7 @@ This is an approximation of what you could do to avoid this:
 		return false;
 	}
 
-Supported databases
+Supported databases {#databases}
 -------------------
 The aim of the class `Model` is to support **multiple database drivers**. It has been very common for us in the past to connect to several *unknown* databases and ADODB gave us a common interface to connect them all. A **non-complete** full list of supported databases is here:
 
@@ -115,7 +115,6 @@ The aim of the class `Model` is to support **multiple database drivers**. It has
 * Netezza
 * Sybase SQL Anywhere
 
-See the [ADODBdriver] [list of drivers] for further detail.
+See the [ADODB] [List of supported ADODB drivers](http://phplens.com/lens/adodb/docs-adodb.htm#drivers) for the rarest drivers.
 
 [ADODB]: http://phplens.com/lens/adodb/docs-adodb.htm
-[ADODBdriver]: http://phplens.com/lens/adodb/docs-adodb.htm#drivers "List of supported ADODB drivers"
