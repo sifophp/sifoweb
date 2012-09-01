@@ -18,7 +18,7 @@ $config["API"] = array(
 );
 
 $config["markdown_docs"] = array(
-	"title" => "SIFO Docs: %title%",
-	"description" => "SIFO documentation: %title%",
-	"keywords" => "sifo api, documentation, docs, manual, api"
+	"title" => "%title% - Sifo documentation",
+	"description" => "%title% - Sifo",
+	"keywords" => "sifo api, php, documentation, docs, manual, api"
 );
