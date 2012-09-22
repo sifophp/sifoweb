@@ -1,13 +1,14 @@
-Nginx Configuration
-===================================
+Nginx Virtualhosts
+==================
 For those of you using Nginx installations, this is supposed to be a "First Aid" guide to translate the framework requirements explained in the apache section for Nginx webservers. For further information about Nginx virtualhosts: <a href="http://wiki.nginx.org/Configuration" title="Nginx Wiki Page">Nginx Wiki Page</a>
 
 Find the damn virtualhost config file
 -------------------------------------
-Normally Nginx configuration files are located under **/etc/nginx** path. Usually, inside this folder you'll find a /conf.d folder that contains the vhost definitions.
+Normally Nginx configuration files are located under `/etc/nginx` path. Usually, inside this folder you'll find a `/conf.d` folder that contains the vhost definitions.
 
 ### VirtualHost content ###
-Once you've located where you have to write the content and how, this is the content you need to write. Adapt paths to your installation:
+Once you've located where you have to write the content and how, this is the content you need to write.
+Adapt the to your installation, replace `/path/to/sifo` and `yourinstance` accordingly.
 
     # Fake CDN. Specific entry to serve static content such as CSS, JS or Images
     server

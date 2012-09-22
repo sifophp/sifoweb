@@ -8,6 +8,7 @@ abstract class SharedFirstlevelController extends \Sifo\Controller
 	{
 		// Static items shown in the top bar and in the footer:
 		$params['menu_items'] = array(
+			'installation',
 			'quick-start',
 			'API',
 			'download',
