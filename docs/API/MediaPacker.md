@@ -75,7 +75,7 @@ The array key (`default` in the example) is the name of the group. To create mor
 
 The **name** attribute is just an alias to help you understand the final file when you open it.
 
-The **filename** field is the relative path to the file, starting from the SIFO folder installation.
+The **filename** field is the relative path to the file, starting from the Sifo folder installation.
 
 ### Special notes for the `default` array ###
 If the group file is named `default` the `MediaPacker` will preppend at the beginning of the file a javascript array with all the paths of the other groups. With this you will be able to load from Javascript the rest of packed groups. Like this one:

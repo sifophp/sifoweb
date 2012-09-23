@@ -1,8 +1,8 @@
 Installation
 ============
-> Install SIFO in 5 minutes. So to speak.
+> Install Sifo in 5 minutes. So to speak.
 
-If you are comfortable with a terminal, this is the easiest way to install SIFO. The installation of the SIFO framework basically consists in the following steps:
+If you are comfortable with a terminal, this is the easiest way to install Sifo. The installation of the Sifo framework basically consists in the following steps:
 
  * [Clone or download the project](#clone)
  * [Configure the web server](#webserver)

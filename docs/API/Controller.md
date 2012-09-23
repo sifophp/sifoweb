@@ -88,11 +88,11 @@ Is not always possible to translate everything in the template. When you need to
 
 Translates a string and places the variables in the order of insertion. You can pass as many variables as you need (or none). The translations must have the identifiers %1, %2, %3 etc... to place the content. For instance:
 
-	$this->translate( 'Hello %1, welcome to %2', 'John', 'SIFO' );
+	$this->translate( 'Hello %1, welcome to %2', 'John', 'Sifo' );
 	
-This code would output *Hello John, welcome to SIFO*. This is useful when the controller sets a message, but your template is already capable of doing this via:
+This code would output *Hello John, welcome to Sifo*. This is useful when the controller sets a message, but your template is already capable of doing this via:
 
-	{t 1='John' 2='SIFO'}Hello %1, welcome to %2{/t}
+	{t 1='John' 2='Sifo'}Hello %1, welcome to %2{/t}
 	
 The most common use of the translations in the controller context is for setting a FlashMessage after a successful or invalid operation. For example:
 

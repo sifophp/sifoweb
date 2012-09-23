@@ -1,6 +1,6 @@
 Configuring the Apache VirtualHosts
 ===================================
-Although we do use several web servers with SIFO such as Lighttpd or Nginx (mainly for static files), truth is that almost all installations user Apache2 as their web server. We do provide step by step installations to run SIFO under apache, but this can be done in any other webserver.
+Although we do use several web servers with Sifo such as Lighhttpd or Nginx (mainly for static files), truth is that almost all installations user Apache2 as their web server. We do provide step by step installations to run Sifo under apache, but this can be done in any other webserver.
 
 In production, if you want to run a single project it performs better not using VirtualHosts at all, but since is very convenient in development time to manage several projects at once we present this configuration.
 

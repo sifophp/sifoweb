@@ -1,9 +1,9 @@
-Download SIFO
+Download Sifo
 =============
-There are several ways to get a copy or working copy of [SIFO]. You can download a compressed file or clone the
+There are several ways to get a copy or working copy of [Sifo]. You can download a compressed file or clone the
 entire project. The VCS we use at the moment is Git and we host the code in [Github] [GH].
 
-You need at least **PHP 5.3** to run SIFO. We make use of namespaces and other capabilities of PHP only available to 5.3 and greater.
+You need at least **PHP 5.3** to run Sifo. We make use of namespaces and other capabilities of PHP only available to 5.3 and greater.
 
 
 
@@ -21,11 +21,11 @@ the code, but upgrades to the next versions have to be done manually.
 
 Clone/fork/download from github `RECOMMENDED`
 --------------------------------------------
-Either if you want to contribute back or not, here is the latest version of the framework, see [SIFO at Github] [GH]. We
+Either if you want to contribute back or not, here is the latest version of the framework, see [Sifo at Github] [GH]. We
 recommend you to clone the project in your machine <a target="_blank" href="https://github.com/alombarte/SIFO" class="btn">Clone @ GitHub <i class="icon-refresh"></i></a> or
 issue the command:
 
-	# Clone the SIFO project into a folder called "sifo":
+	# Clone the Sifo project into a folder called "sifo":
 	git clone git://github.com/alombarte/SIFO.git sifo
 
 
@@ -46,6 +46,6 @@ sense to you. We fiercely discourage you to use this version:
 
 ACHTUNG! Warning! Compte! ATENCIÓN! Do not use this version!
 
-[SIFO]: http://sifo.me
-[GH]: https://github.com/alombarte/SIFO "Visit the Github SIFO repository"
+[Sifo]: http://sifo.me
+[GH]: https://github.com/alombarte/SIFO "Visit the Github Sifo repository"
 

@@ -1,6 +1,6 @@
 Installation in a shared hosting
 ================================
-If you want to install SIFO in a shared server and you don't have the possibility to modify the VirtualHosts here is a trick. The following example
+If you want to install Sifo in a shared server and you don't have the possibility to modify the VirtualHosts here is a trick. The following example
 is for **Webfaction**, but others are similar.
 
  * Create a new App _Static/CGI/PHP-5.3_

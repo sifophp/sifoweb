@@ -1,18 +1,5 @@
 {extends file=$_tpls['layout/basic.tpl']}
 {block name='content'}
-{*
-<div id="masthead">
-	<div class="inner">
-        <div class="container">
-			<h1>Framework for PHP</h1>
-			<p class="lead">
-				SIFO is a flexible PHP5 framework for real-world web applications.<br />
-				Daily use classes, Memcached, Redis, Sphinx, Mysql and other RDBMS inside a Model-View-Controller context.
-			</p>
-        </div> <!-- /container -->
-	</div>
-</div>
-*}
 <div id="quickstart">
 	<div class="container">
 		<section id="introduction">
@@ -20,10 +7,11 @@
 				<div class="span6 columns">
 
                     <div class="teaser well">
-                        <p><a href="http://sifo.me">SIFO</a> is a well-proben open source PHP5 framework currently running on several
-                        sites, from small installations to large websites with multiple servers.</p>
+                        <p><a href="http://sifo.me">Sifo</a> is a well-proben open source framework for PHP professionals.
+                            Supports <strong>website inheritance</strong>, multilanguage, scaling, and all the tools for
+                            debugging and quick build. It is suitable for small installations and large websites with multiple servers and balancing.</p>
 
-                        <p>SIFO is free and very easy to use. Contains a lot of <strong>libraries and classes</strong> that resolve your
+                        <p>Sifo is free and very easy to use. Contains a lot of <strong>libraries and classes</strong> that solve your
                         <strong>basic problems</strong> and allow you to focus in your business logic, at a very low learning curve. If there is a curve :)</p>
                     </div>
 
@@ -294,13 +282,7 @@ $config['bleeding_edge_insane'] = array(
     'mylibrary' =&gt; 'Mylibrary-2.0alpha-unstable'
 );
 </code></pre>
-						<p>At execution time you can always load any needed application via the
-							<code>$this-&gt;getClass( 'ClassName' )</code> function in any point of the code, or if it's
-							going to be loaded for sure include it in a protected var:</p>
 
-						<pre class="prettyprint"><code>// Include the Filter class before the Controller is actually executed:
-protected $include_classes = array( 'Filter' );
-</code></pre>
 					</div>
 				</div>
 				<div class="row">
