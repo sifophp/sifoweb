@@ -26,7 +26,7 @@ cover all specific services so we used Webfaction as a sample.
 
 * [Apache configuration](/installation/apache-virtualhosts)
 * [Nginx configuration](/installation/nginx-virtualhosts)
-* [Shared hosting configuration](/installation/webfaction)
+* [Shared hosting configuration](/installation/shared-hosting-webfaction)
 
 ### Create your project {#instance}
 After downloading the code you have to create your own `instance`. This is how we call your specific project. Creating
