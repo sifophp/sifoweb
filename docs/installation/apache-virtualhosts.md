@@ -24,6 +24,8 @@ Once you've located where you have to write the content and how, this is the con
 	<VirtualHost *:80>
 	        ServerName static.yourproject.com
 	        DocumentRoot /path/to/sifo/instances/yourinstance/public/static
+	        # Recommended, uncomment to GZIP all CSS, JS, JSON, HTML, and TXT
+	        # AddOutputFilterByType DEFLATE text/plain text/html text/javascript text/css application/json
 	</VirtualHost>
 
 	# Dynamic content (PHP)
