@@ -30,6 +30,7 @@ The full list of classes belonging to the framework is [browseable at Github](ht
 * Filter
 * FlashMessages
 * Form
+* Header
 * I18N
 * imageController
 * Images
@@ -43,6 +44,7 @@ The full list of classes belonging to the framework is [browseable at Github](ht
 * Model
 * MysqlModel
 * Mysql
+* Password
 * PaypalNotifier
 * RedisModel
 * Registry
