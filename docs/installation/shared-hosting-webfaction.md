@@ -13,8 +13,7 @@ is for **Webfaction**, but others are similar.
 Content of .htaccess:
 
 	RewriteEngine On
-	# Allowed media extensions (includes .txt files for robots or .html, e.g: Google hosted HTMLs):
-	RewriteCond %{REQUEST_FILENAME} !^(.+)\.(js|css|gif|png|jpe?g|swf|ico|txt|html)$
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
 	RewriteRule ^([^.]+)/?$ /index.php
 
 And finally:

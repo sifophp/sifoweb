@@ -46,3 +46,7 @@ $config['sifo.me'] = array(
 $config['sifo-web.local'] = $config['sifo.me'];
 $config['sifo-web.local']['devel'] = true;
 $config['sifo-web.local']['static_host'] = 'http://static.sifo-web.local';
+
+$config['sw.mrchurrero.com'] = $config['sifo-web.local'];
+$config['sw.mrchurrero.com']['auth'] = 'alo,beta2801';
+$config['sw.mrchurrero.com']['static_host'] = 'http://static.sw.mrchurrero.com';

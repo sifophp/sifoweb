@@ -1,4 +1,9 @@
-### Video tutorial ###
+Video tutorial
+==============
+> Outdated
+
+## CAUTION: THIS VIDEO IS VERY OLD AND DEMONSTRATES EARLY VERSIONS OF SIFO.
+
 
 This is a quick demonstration on how to start working with Sifo: *get the code, create an instance and create the first controller* Watching a video is easier than reading a ton of documentation. It is splitted in two parts (that's what happens when you use demo products!)
 

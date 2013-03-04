@@ -11,6 +11,7 @@ abstract class SharedFirstlevelController extends \Sifo\Controller
 			'installation',
 			'quick-start',
 			'API',
+			'recipes',
 			'download',
 			'community'
 		);

@@ -10,14 +10,21 @@ Depending on the Linux/Mac/BSD whatever flavour you are using the location for t
 
 The most common paths are:
 
-* For **RedHat/CentOS** and other familiars: A single file under: `/etc/httpd/conf.d/virtual.conf`
-* **Debian/Ubuntu** and others: Several files under `/etc/apache2/sites-available/` and then linked in `/etc/apache2/sites-enabled/`
-* Other systems directly write the VirtualHost content inside the `httpd.conf` file.
+### RedHat/CentOS and similar
+A single file under: `/etc/httpd/conf.d/virtual.conf` (create the new file `virtual.conf`)
 
-### VirtualHost content ###
+### Debian/Ubuntu
+Several files under `/etc/apache2/sites-available/` and then linked in `/etc/apache2/sites-enabled`like:
+
+	ln -s /etc/apache2/sites-available/00-myfile /etc/apache2/sites-enabled/00-my-file
+
+### Other
+Other systems usually write the VirtualHost content inside the `httpd.conf` file.
+
+## VirtualHost content
 Once you've located where you have to write the content and how, this is the content you need to write. Adapt paths to your installation:
 
-    # Do not forget this line!
+    # Do not forget this line if it does not exist!
     NameVirtualHost *:80
 
 	# Fake CDN. Specific entry to serve static content such as CSS, JS or Images
@@ -35,8 +42,10 @@ Once you've located where you have to write the content and how, this is the con
 	        DocumentRoot /path/to/sifo/instances/yourinstance/public/root
 
 	        RewriteEngine On
-	        #Allowed media extensions (includes .txt files for robots or .html, e.g: Google hosted HTMLs):
-	        RewriteCond %{REQUEST_FILENAME} !^(.+)\.(js|css|gif|png|jpg|swf|ico|txt|html?)$
+	        # Allowed media extensions (includes .txt files for robots or .html, e.g: Google hosted HTMLs):
+	        # RewriteCond %{REQUEST_FILENAME} !^(.+)\.(js|css|gif|png|jpg|swf|ico|txt|html?)$
+	        # Or dispatch any non-physical file:
+	        RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
 	        RewriteRule ^/(.+) /index.php [QSA,L]
 	</VirtualHost>
 

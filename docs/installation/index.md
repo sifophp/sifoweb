@@ -2,7 +2,34 @@ Installation
 ============
 > Install Sifo in 5 minutes. So to speak.
 
-If you are comfortable with a terminal, this is the easiest way to install Sifo. The installation of the Sifo framework basically consists in the following steps:
+In order to install Sifo you need to have at least an Apache/Nginx running with PHP. Depending on your needs
+a variety of other services can be needed, such as Mysql, Sphinx, Redis... etc. If you want to start playing
+with Sifo or if you intend to do local development first the most convenient way to work is install Sifo inside
+a Virtual Machine.
+
+## Automatic installation using Vagrant (recommended)
+Hold on to the seats, this is all you need to do to have Sifo running in your local machine inside a Virtual machine:
+
+* Download and install [Vagrant](http://www.vagrantup.com/) (do not be scared, this is a double-click installation)
+* Automatically download and install the machine by:
+
+Copy/paste:
+
+	git clone --recursive git@bitbucket.org:obokaman/centos-6.3-lamp-with-vagrant-for-sifo.git vmSifo
+	cd vmSifo
+	vagrant up
+
+That's all. No kidding. These commands will download a [running Sifo via Vagrant](https://bitbucket.org/obokaman/centos-6.3-lamp-with-vagrant-for-sifo)
+
+Now to access the running site:
+
+* Add in your machine as *DNS server* the IP `192.168.33.10` (will resolve any .local or .vm domains)
+* Now sifo is accessible in [http://sifo.local](http://sifo.local)
+* Read this [README](https://bitbucket.org/obokaman/centos-6.3-lamp-with-vagrant-for-sifo) to understand how Vagrant works with Sifo
+* [Start coding your own project](#instance)
+
+## Manual installation
+If you are comfortable with a terminal, this is the way to install Sifo. The installation of the Sifo framework basically consists in the following steps:
 
  * [Clone or download the project](#clone)
  * [Configure the web server](#webserver)
@@ -28,7 +55,7 @@ cover all specific services so we used Webfaction as a sample.
 * [Nginx configuration](/installation/nginx-virtualhosts)
 * [Shared hosting configuration](/installation/shared-hosting-webfaction)
 
-### Create your project {#instance}
+## Create your project {#instance}
 After downloading the code you have to create your own `instance`. This is how we call your specific project. Creating
 an instance can be easily done by executing one time only script.
 
@@ -47,7 +74,7 @@ we create the instance like this:
     bash scripts/create_instance.sh mywebapp mywebapp.local
 
 You'll need to add in your `/etc/hosts` (Linux and Mac) an entry `mywebapp.local` with the IP of the server. In case you
-are planning to have multiple and dynamic subdomains a DNS server is recommended.
+are planning to have multiple and dynamic subdomains a DNS server is recommended (as we suggested with Vagrant installation).
 
 **Example of `hosts`**
 
