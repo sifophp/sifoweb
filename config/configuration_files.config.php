@@ -11,6 +11,8 @@ $config['lang/metadata_es_ES'] = 'instances/sifoweb/config/lang/metadata_es_ES.c
 $config['lang/router_en_US'] = 'instances/sifoweb/config/lang/router_en_US.config.php';
 $config['lang/router_es_ES'] = 'instances/sifoweb/config/lang/router_es_ES.config.php';
 $config['libraries'] = 'instances/sifoweb/config/libraries.config.php';
+$config['locale'] = 'instances/sifoweb/config/locale.config.php';
+$config['router'] = 'instances/sifoweb/config/router.config.php';
 $config['templates'] = 'instances/sifoweb/config/templates.config.php';
 $config['url'] = 'instances/sifoweb/config/url.config.php';
 
