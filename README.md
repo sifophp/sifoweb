@@ -17,7 +17,7 @@ Then in your Apache virtualhosts you should add something like:
 	# SIFO.ME
 	<VirtualHost *:80>
 			ServerName static.sifo-web.local
-			ServerName static.sifo.local
+			
 			DocumentRoot /var/www/sifo/instances/sifoweb/public/static
 	</VirtualHost>
 
