@@ -1,10 +1,15 @@
-Easy PHP Sphinx setup
-=====================
-> How to get a sphinx setup running
+Setting up sphinx for PHP
+=========================
+> SIFO comes with all the tools to start working with Sphinx right away. Here's a quick guideline to get started.
+
+Sifo comes with the Search libraries ready to start sending queries and a debug environment that gives you visibility on the queries you are launching to the server. You only need to tell the application where things are.
+
 
 Application side
 ----------------
-In your `sphinx.config.php` set the connection settins for the `default` profile (you can have many). Needless to say these settings have to much the server side configuration.
+First thing to do is to tell the framework where the server will be running:
+
+In your `sphinx.config.php` set the connection settings for the `default` profile (you can have many profiles, use any name you like). Needless to say these settings have to match the server configuration.
 
 	$config['default'] = array(
 		// Sets if sphinx is active or not.
@@ -16,6 +21,10 @@ In your `sphinx.config.php` set the connection settins for the `default` profile
 	);
 	
 ### Searching code (quick & dirt)
+Then you can start searching with a few lines of code.
+
+Here is an example of function:
+
 	public function getSearchResults( $query_string, $params )
 	{
 		$this->search_adapter = \Sifo\Search::getInstance( 'default' ); // This is the name of one of the profiles you have in sphinx.config
@@ -46,10 +55,9 @@ In your `sphinx.config.php` set the connection settins for the `default` profile
 
 Server side
 -----------
-You need to specify the port on which the application will listen to, what is the query that indexes the content and run the service. Let's get started!
+The framework search won'r work unless you have a sphinx server up. If you have never done such a thing is not that difficult. All you need to do is pretty much specifying the port on which the daemon will listen to, what is the query that indexes the content and raise the service. Let's get started!
 
 ### Create the sphinx configuration file
-
 
 You need to create the configuration file, the following is an example that uses index inheritance. You cannot copy and paste this, every application needs its own values, try to understand it:
 
@@ -96,13 +104,6 @@ You need to create the configuration file, the following is an example that uses
 		sql_field_string = title
 
 		sql_attr_uint = id_my_content_table
-
-		sql_attr_multi = uint id_tag1 from query; SELECT id_my_content_table, id_tag FROM content_tags
-		sql_attr_multi = uint id_tag2 from query; SELECT id_my_content_table, id_tag FROM content_tags
-		sql_attr_multi = uint id_tag3 from query; SELECT id_my_content_table, id_tag FROM content_tags
-		sql_attr_multi = uint id_tag4 from query; SELECT id_my_content_table, id_tag FROM content_tags
-
-
 	}
 
 	# source src_tags_tr : src_common
@@ -242,22 +243,24 @@ We assume a paths like this:
 	SPHINX_CONFIG=/path/to/websearch.conf
 
 	
-#### Create the Sphinx index
+**Create the Sphinx index**
 
 	${SPHINX_PATH}/indexer -c $SPHINX_CONFIG --all
 
-#### Rotate it (reindex)
+**Rotate it (reindex)**
+
 If you want to reindex again (launch the whole sql query) then you need to do this:
 
 	${SPHINX_PATH}/indexer -c $SPHINX_CONFIG --all --rotate
 	
 Of course you can use deltas if the table is heavy
 
-#### Start the daemon
+**Start the daemon**
 
 	${SPHINX_PATH}/indexer -c $SPHINX_CONFIG --all --rotate
 
-#### Kill the service
+**Kill the service**
+
 Well, not very fancy:
 
 	killall searchd
