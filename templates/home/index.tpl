@@ -7,7 +7,7 @@
 				<div class="span6 columns">
 
                     <div class="teaser well">
-                        <p><a href="http://sifo.me">Sifo</a> is a well-proben open source framework for PHP professionals.
+                        <p><a href="http://sifo.me">Sifo</a> is a well-proven open source framework for PHP professionals.
                             Supports <strong>website inheritance</strong>, multilanguage, scaling, and all the tools for
                             debugging and quick build. It is suitable for small installations and large websites with multiple servers and balancing.</p>
 
