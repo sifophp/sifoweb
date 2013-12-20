@@ -13,7 +13,8 @@ abstract class SharedFirstlevelController extends \Sifo\Controller
 			'API',
 			'recipes',
 			'download',
-			'community'
+			'community',
+			'about'
 		);
 
 		// Propagate additional parameters to children:
