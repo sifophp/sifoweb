@@ -15,4 +15,27 @@ Two years after an extensive usage, enhancements, testing and multiple online ap
 
 Since 2011 the project keeps moving on and evolving every day thanks to several companies and individuals with the spirit of the Open Source movement. If you want to contribute to the project, we cannot be happier. Get on the train.
 
--- Albert Lombarte
+`-- Albert Lombarte`
+
+Contributors
+------------
+
+### Top contributors (update 2014):
+
+- Albert Lombarte
+- Albert García
+- Jorge Tarrero
+- Pablo Ros
+- Javier Ferrer
+- Alejandro Pérez
+- Carlos Lombarte
+- Sergio Ambel
+- Nil Portugués
+
+### Also contributed:
+- Daniel Madurell
+- Quim Blanch
+- Carlos Soriano
+- Manel Fernández
+- Antonio Pinel
+- Juan Manuel Garrido
