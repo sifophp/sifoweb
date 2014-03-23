@@ -19,7 +19,7 @@ The minimum layout to run a controller is the following:
 	        }
 	}
 
-Note that the class contins the folder where its located (`home`) first letter is capital and the type ( `Controller` )
+Note that the class contains the folder where its located (`home`) first letter is capital and the type ( `Controller` )
 
 If you create a new controller in your instance then you need to add a namespace with your instance name (upper case first) at the beginning of the file. For example, if you created the instance `myinstance` and you want to create your own custom version of this same file, it would look like:
 
