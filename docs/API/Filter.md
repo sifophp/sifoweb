@@ -16,19 +16,14 @@ This is an example receiving a form using POST and using FilterPost class:
 
     $filterPost = \Sifo\FilterPost::getInstance();
 
-
     if ( $filterPost->isSent( 'submit' ) )
     {
-                $values['name']         = $filterPost->getString( 'name' );
-                $values['visitors']               = $filterPost->getInteger( 'visitors' );
-                $values['amount']         = $filterPost->getFloat( 'amount' )
-        }
-
+                $values['name']     = $filterPost->getString( 'name' );
+                $values['visitors'] = $filterPost->getInteger( 'visitors' );
+                $values['amount']  	= $filterPost->getFloat( 'amount' )
+    }
 
 This class allow to us receive and filter all kinds of information:
-
-
-
 
 Method Sumary:
 -------------------------
