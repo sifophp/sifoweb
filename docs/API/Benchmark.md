@@ -1,12 +1,12 @@
 Benchmark
 =========================
 
-The Benchmark Class allows you to make an internal checks to get benchmark time for a given PHP code, how it works is really easy. Basically you need the key name of your benchmark that you decided:
+The Benchmark Class allows you to measure the time passed between checks for any given PHP code. To make it work you only need to label the measurament with a a key and put the code in those places that mark the start or end of the benchmark:
 
 Code example
----------------
+-------------
 
-Instantiating the Benchmark class, you must define the key name of your Benchmark to start the timer:
+Instance the Benchmark class, you must define the key name of your Benchmark (label) to start the timer:
 
         // Start timer
         \Sifo\Benchmark::getInstance()->timingStart( 'name_of_benchmark' );
@@ -18,10 +18,10 @@ Instantiating the Benchmark class, you must define the key name of your Benchmar
         
         echo "{INFO} Your Code took {$time_generated}s.";
 
-Stores the current time to registry to accumulate partials:
+Store the current time to `Registry`, accumulating partials:
 
         $time_generated = \Sifo\Benchmark::getInstance()->timingCurrentToRegistry( 'name_of_benchmark' );
 
-Stopping timer when we doesn't need any more
+Stop the timer when it is not needed anymore:
         
         \Sifo\Benchmark::getInstance()->timingStop( 'name_of_benchmark' );
