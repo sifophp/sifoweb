@@ -37,3 +37,6 @@ $config['rebuild'] = 'manager/rebuild';
 // Used in debug mode Mail Interception.
 $config['mail-continue'] = 'debug/mail';
 
+// Sifo Debug
+$config['sifo-debug-analyzer'] = 'debug/analyzer';
+$config['sifo-debug-actions'] = 'debug/actions';
