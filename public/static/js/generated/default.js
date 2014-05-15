@@ -4,7 +4,7 @@ var	sHostStatic = window.sHostStatic ? window.sHostStatic : "http://static.sifo-
 	basePathConfig = {
 		'default': sHostStatic + '/js/generated/' + sInstance + 'default.js?rev=' + Hash
 	};
-alert( 'File jquery not found' );/* BEGIN prettifier */
+/* BEGIN prettifier */
 
 var q=null;window.PR_SHOULD_USE_CONTINUATION=!0;
 (function(){function L(a){function m(a){var f=a.charCodeAt(0);if(f!==92)return f;var b=a.charAt(1);return(f=r[b])?f:"0"<=b&&b<="7"?parseInt(a.substring(1),8):b==="u"||b==="x"?parseInt(a.substring(2),16):a.charCodeAt(1)}function e(a){if(a<32)return(a<16?"\\x0":"\\x")+a.toString(16);a=String.fromCharCode(a);if(a==="\\"||a==="-"||a==="["||a==="]")a="\\"+a;return a}function h(a){for(var f=a.substring(1,a.length-1).match(/\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\[0-3][0-7]{0,2}|\\[0-7]{1,2}|\\[\S\s]|[^\\]/g),a=
@@ -36,4 +36,4 @@ hashComments:3,cStyleComments:!0,multilineStrings:!0,tripleQuotedStrings:!0,rege
 PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING:"str",PR_TAG:"tag",PR_TYPE:"typ"}})();
 
 
-/* END prettifier */
+/* END prettifier */
