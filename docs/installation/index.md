@@ -7,6 +7,10 @@ a variety of other services can be needed, such as Mysql, Sphinx, Redis... etc. 
 with Sifo or if you intend to do local development first the most convenient way to work is install Sifo inside
 a Virtual Machine.
 
+## Sifo requirements
+* PHP >= 5.3 (We use namespaces!)
+* PDO & SQLite3 (In order to [save executions debug](/API/Debug) and being able to recover them, we use a little database managed thanks to the PDO extension, do not worry, it [comes with the default PHP installation since 5.1](http://php.net/manual/en/intro.pdo.php) and the SQLite3 extension also [comes with the default installation since 5.3.0](http://php.net/manual/en/sqlite3.installation.php))
+
 ## Automatic installation using Vagrant (recommended)
 Hold on to the seats, this is all you need to do to have Sifo running in your local machine inside a Virtual machine:
 
