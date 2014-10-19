@@ -2,7 +2,7 @@ Your first controller
 =====================
 > Because everyone needs to put a Hello World in their life.
 
-When you explore the controllers for first time you should have a look at the file `instances/common/controllers/home/index.ctrl.php` or grab a copy of the instance `sifo-web` that powers this site (see the footer for source code) and then explore what is done.
+When you explore the controllers for first time you should have a look at the file `vendor/sifophp/sifo-common-instance/controllers/home/index.ctrl.php` or grab a copy of the instance `sifo-web` that powers this site (see the footer for source code) and then explore what is done.
 
 The first thing to notice is the Class naming and file class name. You can work with or without the `.ctrl.` extension.
 The minimum layout to run a controller is the following:

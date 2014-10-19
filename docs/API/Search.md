@@ -1,7 +1,7 @@
 Search powered by Sphinx
 ========================
 
-The `Search` class is a an extension of the original `SphinxClient` published by the Sphinx project (@see `libs/Sphinx/sphinxapi.php`).
+The `Search` class is a an extension of the original `SphinxClient` published by the Sphinx project (@see `vendor/sifophp/sifo/src/Sphinx/sphinxapi.php`).
 
 Back in 2010 we did test Solr and Lucene as well, but we liked the most Sphinx, which has been performing awesome for the past years. This is why Search for us is a synonym of Sphinx :)
 

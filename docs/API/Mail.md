@@ -6,7 +6,7 @@ The `Mail` class is a simple PHPMailer wrapper. If you send email in several pla
 
 ### Configuring the email.
 
-The email settings are found in the `mail.config.php`. If your instance does not have this file yet just copy `instances/common/config/mail.config.php` to the same path within your instance and then `/rebuild` your project.
+The email settings are found in the `mail.config.php`. If your instance does not have this file yet just copy `vendor/sifophp/sifo-common-instance/config/mail.config.php` to the same path within your instance and then `/rebuild` your project.
 
 All the settings you write there will be used when you send an email. If you need to specify more PHPMailer attributes that are not present in the configuration, just add a key with the same name of the attribute and it will be set for you.
 

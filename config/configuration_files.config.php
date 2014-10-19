@@ -1,5 +1,5 @@
 <?php
-include ROOT_PATH . '/instances/common/config/configuration_files.config.php';
+include ROOT_PATH . '/vendor/sifophp/sifo-common-instance/config/configuration_files.config.php';
 $config['cache'] = 'instances/sifoweb/config/cache.config.php';
 $config['classes'] = 'instances/sifoweb/config/classes.config.php';
 $config['css'] = 'instances/sifoweb/config/css.config.php';
@@ -15,4 +15,3 @@ $config['locale'] = 'instances/sifoweb/config/locale.config.php';
 $config['router'] = 'instances/sifoweb/config/router.config.php';
 $config['templates'] = 'instances/sifoweb/config/templates.config.php';
 $config['url'] = 'instances/sifoweb/config/url.config.php';
-

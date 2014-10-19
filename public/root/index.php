@@ -14,7 +14,7 @@ $instance = 'sifoweb';
 // Define the root path:
 define( 'ROOT_PATH', $root );
 
-require ROOT_PATH . '/instances/Bootstrap.php';
+require ROOT_PATH . '/vendor/sifophp/sifo/src/Sifo/Bootstrap.php';
 
 // Execute your instance:
 \Sifo\Bootstrap::execute( $instance );
