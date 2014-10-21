@@ -11,7 +11,15 @@ a Virtual Machine.
 * PHP >= 5.3 (We use namespaces!)
 * PDO & SQLite3 (In order to [save executions debug](/API/Debug) and being able to recover them, we use a little database managed thanks to the PDO extension, do not worry, it [comes with the default PHP installation since 5.1](http://php.net/manual/en/intro.pdo.php) and the SQLite3 extension also [comes with the default installation since 5.3.0](http://php.net/manual/en/sqlite3.installation.php))
 
-## Automatic installation using Vagrant (recommended)
+## Install via composer
+If you want to have an instance of Sifo running in a minute then you should clone the `sifo-app` which is a sample application using Sifo.
+
+    git clone https://github.com/sifophp/sifo-app.git
+    composer install
+
+After this add `sifo-web.local` as a new Virtualhost, pointing to `instances/sifoweb/public/root` (see [Apache configuration](/installation/apache-virtualhosts) for further information)
+
+## Automatic installation using Vagrant
 Hold on to the seats, this is all you need to do to have Sifo running in your local machine inside a Virtual machine:
 
 * Download and install [Vagrant](http://www.vagrantup.com/) (do not be scared, this is a double-click installation)
