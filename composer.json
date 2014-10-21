@@ -2,7 +2,7 @@
     "name": "sifophp/sifoweb",
     "description": "Sifo.me documentation website",
     "keywords": [],
-    "homepage": "https://github.com/sifophp/sifo-instance-documentation",
+    "homepage": "https://github.com/sifophp/sifoweb",
     "type": "sifo-instance",
     "extra": "sifoweb"
 }
