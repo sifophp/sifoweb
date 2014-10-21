@@ -1,0 +1,8 @@
+{
+    "name": "sifophp/sifo-instance-documentation",
+    "description": "Sifo.me documentation website",
+    "keywords": [],
+    "homepage": "https://github.com/sifophp/sifo-instance-documentation",
+    "type": "sifo-instance",
+    "extra": "sifoweb"
+}
