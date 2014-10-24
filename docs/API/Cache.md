@@ -44,7 +44,7 @@ At certain events you might want to delete the existing cache. To invalidate the
 - By deleting the specific cache entry
 - By deleting a `cache tag` that groups a lot of different cache definitions.
  
-The `cache tags` are defined in the `cache.config.php` file. When you have a tag declared in the config, ever ytime a controller returns in the `getCacheDefinition()` an array key containing the declared name, then it's grouped in the tag. By deleting the tag you are actually invalidating all cache keys under that umbrella. Use this wisely.
+The `cache tags` are defined in the `cache.config.php` file. When you have a tag declared in the config, every time a controller returns in the `getCacheDefinition()` an array key containing the declared name, then it's grouped in the tag. By deleting the tag you are actually invalidating all cache keys under that umbrella. Use this wisely.
 
 **To delete a single cache entry**:
 
