@@ -80,7 +80,7 @@
 					<div class="span6 columns">
 						<h3>Proved</h3>
 						<p>Well proved, running since year 2008 and used in a large base of heterogeneous web projects with very different needs and technologies.</p>
-						<p>Powers big sites, some of them with up to 16M page views/month (and raising!)</p>
+						<p>Powers big sites, our current record is <strong>21M pageviews/month</strong> (If you have a new Sifo record let us know!)</p>
 					</div>
 				</div>
 
