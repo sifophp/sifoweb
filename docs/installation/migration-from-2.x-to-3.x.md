@@ -8,7 +8,7 @@ Once is cloned do a `composer install`
 
 ### Changes in your instance
 - Replace all the code that references to the path `libs/` to `vendor/sifophp/sifo/src/`
-- In your dispatcher (`public/root/index.php`) change the path of Bootsrap class to: `require ROOT_PATH . '/vendor/sifophp/sifo/src/sifo/Bootstrap.php';`
+- In your dispatcher (`public/root/index.php`) change the path of Bootstrap class to: `require ROOT_PATH . '/vendor/sifophp/sifo/src/sifo/Bootstrap.php';`
 - Same thing if you have command line scripts with `CLBootstrap`
 - Replace all calls to `instances/common`with `vendor/sifophp/sifo-common-instance`
 - Delete Smarty compiles before going live.

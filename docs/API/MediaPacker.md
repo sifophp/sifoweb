@@ -1,6 +1,6 @@
 MediaPacker
 ===========
-The `MediaPacker` class is an utility to **merge several CSS or JS files into single files**. Through the configuration files you define how you'd like to group the files. It is thought to run with the **Core-js library** alltogether.
+The `MediaPacker` class is an utility to **merge several CSS or JS files into single files**. Through the configuration files you define how you'd like to group the files. It is thought to run with the **Core-js library** altogether.
 
 The concept is very simple: Any site usually has several JS or CSS files that are included in the HTML code one by one. Be for better management or modularization, or because you load external tools, the thing is very negative for the page load performance to call one by one all these files. If there is a bunch of file that you want to load always together (e.g: My own JS code doesn't work without jquery and analytics) you create a group and **load all this files together merged in a single file**. The group definition goes on your own, try to find a balance between what is usually loaded always and the most successful combinations. The things you rarely use should be called asynchronously when needed.
 

@@ -19,7 +19,7 @@ Then in the container template, you will need to include all the module, not onl
 
 ### Oh wait! where is the problem? ###
 
-Cache Management. If you are working with different modules, each module has his own cache then if a module is used in many ocasions he will use the last one and you can't control which is and his behavior.
+Cache Management. If you are working with different modules, each module has his own cache then if a module is used in many occasions he will use the last one and you can't control which is and his behavior.
 
 If I want to keep the different modules with independent cache?
 
@@ -32,7 +32,7 @@ The only think that you need to include in this case is in the parent template:
 
         <!-- REPLACE:LogUserBox -->
 
-You can comunicate the container controller with the replaced controller adding variables: 
+You can communicate the container controller with the replaced controller adding variables: 
 
        <!-- REPLACE:LogUserBox::$var1::$var2 -->
    
@@ -43,6 +43,6 @@ And you can receive them in the controller with:
 
 Including different views
 -----------------------------------------
-Smarty provides the option to include a view in the container template, but this option needs that tou add all the necessary logic and assign variables in your controller. 
+Smarty provides the option to include a view in the container template, but this option needs that you add all the necessary logic and assign variables in your controller. 
  
         {include file='footer.tpl'}

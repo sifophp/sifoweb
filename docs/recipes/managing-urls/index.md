@@ -49,7 +49,7 @@ When using multiple params SIFO will sort them alphabetically.
 	
 The other values defined in this function are:
     
-* `is_list`: `boolean` value that defines if it's accepted a list of comma sepparated values. **Important**: when `is_list` is true, it will return always an array of values, even if there is a single parameter.
+* `is_list`: `boolean` value that defines if it's accepted a list of comma separated values. **Important**: when `is_list` is true, it will return always an array of values, even if there is a single parameter.
 	
 * `apply_translation`: `boolean` value that defines if SIFO must recognize the translated version of the value (E.g: `o:baratos` in Spanish site).
 	

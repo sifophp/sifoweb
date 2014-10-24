@@ -28,7 +28,7 @@ You can configure the debug environment by changing the values found in `config/
 These two flags do the following:
 
  * The `devel` flag marks the environment as **in development**. You can later do some logic only when the execution is in development mode.
- * The `has_debug` flag states if the running domain has the capabilty of showing the floating debug or not.
+ * The `has_debug` flag states if the running domain has the capability of showing the floating debug or not.
 
 By default, if `has_debug` is omitted in the configuration, it has the same value of `devel` var.
 

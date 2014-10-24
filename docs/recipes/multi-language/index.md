@@ -6,7 +6,7 @@ Translating Websites With SIFO
  
 We are supposing that you know how to use multilanguage in SIFO, but you need to know how works:
 
-Each website loaded consults to `domains.config` which is his language defined, then it looks for to the folder `./locale` the differents messages files that exists to load tha language, if the language not exists it leaves the default language. One example of the messages file will be: `messages_es_ES.php`, but don't worry about his file, SIFO creates it for you! 
+Each website loaded consults to `domains.config` which is his language defined, then it looks for to the folder `./locale` the different messages files that exists to load that language, if the language not exists it leaves the default language. One example of the messages file will be: `messages_es_ES.php`, but don't worry about his file, SIFO creates it for you! 
 
 In the example we could see that with SIFO Web Interface you will generate this files `messages`.
 

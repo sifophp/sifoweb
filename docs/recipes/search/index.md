@@ -55,7 +55,7 @@ Here is an example of function:
 
 Server side
 -----------
-The framework search won'r work unless you have a sphinx server up. If you have never done such a thing is not that difficult. All you need to do is pretty much specifying the port on which the daemon will listen to, what is the query that indexes the content and raise the service. Let's get started!
+The framework search won't work unless you have a sphinx server up. If you have never done such a thing is not that difficult. All you need to do is pretty much specifying the port on which the daemon will listen to, what is the query that indexes the content and raise the service. Let's get started!
 
 ### Create the sphinx configuration file
 
