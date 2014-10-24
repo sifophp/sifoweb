@@ -29,20 +29,20 @@ Method Sumary:
 -------------------------
 
 
-|| Name                |   params     |    Function    |   Return              
-| ------------- |:-------------:| ---------------:|  ---------------:|
-| isSent        | $var_name | Detects if the variable has been send                             | Boolean |
-| countVars     | -         | Return the number of variables that has been send                 | Integer |
-| getString     | $var_name, $sanitized = false | Return this id like a String                  | String |
-| getArray    | $var_name, Array $list_of_elements | Return this id like an Array                | Array |
-| getArrayFromSerialized |   $var_name, $filter_function = null | Return this id like a Serialized Array | Array |
-| getBoolean    | $var_name | Return this id like a Email                                       | Boolean |
-| getDate       | $var_name, $format = 'd-m-Y' |Return this id like a Email                     | Date |
-| getEmail      | $var_name, $check_dns = false | Return this id like a Email                   | Email |
-| getFloat      | $var_name, $decimal = null |  Return this id like a Boolean                   | Float |
-| getInArray    | $var_name, Array $list_of_elements | Return a specific element of an Array    | element of Array |
-| getInteger    | $var_name, $min_range = null, $max_range = null | Return this id like a Integer | Integer |
-| getIP         | $var_name, $min_range = null, $max_range = null | Return this id like an IP   | (IP) |
-| getRegexp     | $var_name, $regexp | Return this id like a Regexp                             | (Regexp) |
-| getUnfiltered | $var_name |                                                                   | Elements |
-| getUrl        | $var_name | Return this id like a Url                                         | URL |
+| Name                   | Params                                           | Function                                          | Return           |
+| ---------------------- |--------------------------------------------------| --------------------------------------------------|-----------------:|
+| isSent                 | $var_name                                        | Detects if the variable has been send             | Boolean          |
+| countVars              | -                                                | Return the number of variables that has been send | Integer          |
+| getString              | $var_name, $sanitized = false                    | Return this id like a String                      | String           |
+| getArray               | $var_name, Array $list_of_elements               | Return this id like an Array                      | Array            |
+| getArrayFromSerialized | $var_name, $filter_function = null               | Return this id like a Serialized Array            | Array            |
+| getBoolean             | $var_name                                        | Return this id like a Email                       | Boolean          |
+| getDate                | $var_name, $format = 'd-m-Y'                     | Return this id like a Email                       | Date             |
+| getEmail               | $var_name, $check_dns = false                    | Return this id like a Email                       | Email            |
+| getFloat               | $var_name, $decimal = null                       | Return this id like a Boolean                     | Float            |
+| getInArray             | $var_name, Array $list_of_elements               | Return a specific element of an Array             | element of Array |
+| getInteger             | $var_name, $min_range = null, $max_range = null  | Return this id like a Integer                     | Integer          |
+| getIP                  | $var_name, $min_range = null, $max_range = null  | Return this id like an IP                         | (IP)             |
+| getRegexp              | $var_name, $regexp                               | Return this id like a Regexp                      | (Regexp)         |
+| getUnfiltered          | $var_name                                        | Return the element without applying any filter    | Elements         |
+| getUrl                 | $var_name                                        | Return this id like a Url                         | URL              |
