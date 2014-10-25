@@ -17,7 +17,7 @@ There are 2 different usages:
 * The string will be used in a URL
 * The string will NOT be used in a URL
 
-If you have to place the cryted string in an URL, use the `encryptForUrl`, while if you don't need it, use just `encrypt`. The difference between the two is that the first removes special characters like `/` or `+` that might lead to wrong decrypt.
+If you have to place the crypted string in an URL, use the `encryptForUrl`, while if you don't need it, use just `encrypt`. The difference between the two is that the first removes special characters like `/` or `+` that might lead to wrong decrypt.
 
 ### Example
 Copy and paste this to test how it works.

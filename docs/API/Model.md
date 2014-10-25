@@ -60,7 +60,7 @@ Stores in the registry (memory) a value with the given `$key`.
 #### Example scenario for registry usage####
 Imagine your application interacts a lot with the logged user and you have several other files that require this user data several times to complete their operations. Let's say your user's data is stored in some Model's function called getData().
 
-Now, you have 5 additional files that need access to the userData and hammer the database constantly. Why would you query again the database if 2 miliseconds ago you already had that information?
+Now, you have 5 additional files that need access to the userData and hammer the database constantly. Why would you query again the database if 2 milliseconds ago you already had that information?
 
 This is an approximation of what you could do to avoid this:
 

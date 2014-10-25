@@ -7,7 +7,7 @@ Creating the instance tree
 The instance tree is the directory tree that stores all the controllers, models, templates and other files for your application. You can populate this tree by using the provided script, or by hand creating the directories one by one.
 
 ### Using the script ###
-Using the *automated script*, all you have to do is to **open the terminal** and go to `/path/to/your/sifo` and execute the script. This script is very simple and uses basic terminal comands such as copy or make dir. This is what you have to launch:
+Using the *automated script*, all you have to do is to **open the terminal** and go to `/path/to/your/sifo` and execute the script. This script is very simple and uses basic terminal commands such as copy or make dir. This is what you have to launch:
 
 	cd scripts
 	chmod +x create_instance.sh
@@ -42,13 +42,13 @@ If you are a Windows user or just love to type, create the following dirs:
 	instances/myproject/templates/_smarty/compile
 	instances/myproject/templates/_smarty/configs
 
-Then copy the files in `default/config/*` to `myproject/config/`. Next make writeable the folders `cache` and `compile` contained inside `myproject/templates`.
+Then copy the files in `default/config/*` to `myproject/config/`. Next make writable the folders `cache` and `compile` contained inside `myproject/templates`.
 
 
 
 Starting your project
 ---------------------
-Once the script has finished creating dirs, the `_smarty` folders are writeable (script should have done so), you should add `myproject.local` or whatever name you choose to your `/etc/hosts` file (in `windows/system32/etc/drivers` for MS lovers). So when you visit the domain resolves to the proper IP.
+Once the script has finished creating dirs, the `_smarty` folders are writable (script should have done so), you should add `myproject.local` or whatever name you choose to your `/etc/hosts` file (in `windows/system32/etc/drivers` for MS lovers). So when you visit the domain resolves to the proper IP.
 
 Then, [configure apache] to point to the new created project and finally visit the URL: <http://myproject.local/rebuild> to automatically prepare all the configuration files ready with your new project.
 

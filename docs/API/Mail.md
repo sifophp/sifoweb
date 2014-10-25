@@ -1,6 +1,6 @@
 Mail
 ====
-> Send e-mail with PHP via SMTP, sendmail or mail. Secure channel or unsecure channel, with your own server or a third party.
+> Send e-mail with PHP via SMTP, sendmail or mail. Secure channel or insecure channel, with your own server or a third party.
 
 The `Mail` class is a simple PHPMailer wrapper. If you send email in several places you will find very handy to write a `mail.config.php` configuration file with all the parameters and then in your models or controllers just specify the recipient and write the email.
 

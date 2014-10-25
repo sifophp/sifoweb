@@ -1,6 +1,6 @@
 Working with Redis Key/Value store
 ==================================
-The `RedisModel` allows you to use the Redis key-value storage system from the PHP environment. (see: http://redis.io). The class only handles the connection, the rest is delegated to the favulous [Predis] library.
+The `RedisModel` allows you to use the Redis key-value storage system from the PHP environment. (see: http://redis.io). The class only handles the connection, the rest is delegated to the fabulous [Predis] library.
 
 [Predis]: https://github.com/nrk/predis/
 
@@ -63,7 +63,7 @@ Then Predis will use the [redis commands] as class methods. Some basic examples:
 Multiple databases (profiles)
 -----------------------------
 The `domains.config.php` only defines a single database, as it happens with other engines like Mysql. If you need more
-profiles for a single project, you can specifiy the multiple databases and ports in the file `redis.config.php`.
+profiles for a single project, you can specify the multiple databases and ports in the file `redis.config.php`.
 This file defines in the format `$config['profile_name']` all the profiles recognised by the app.
 
 Then, when connecting you need to specify the profile you want to connect to. For instance,
@@ -97,7 +97,7 @@ In your models, you will need to specify the profile you want to `connect()` to:
          }
 
 Still, you can use both redis configurations, the one at `domains.config.php` and the one at `redis.config.php`. Just have in
-mind that when you don't specifiy a profile in the method `connect( $profile = null )` then connection settings are taken
+mind that when you don't specify a profile in the method `connect( $profile = null )` then connection settings are taken
 from `domains.config.php` graphically:
 
  * `$redis = $this->connect()` uses `domains.config.php`

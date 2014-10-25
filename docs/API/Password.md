@@ -4,7 +4,7 @@ Storing passwords
 
 The most common technique to store passwords I've seen around is to store passwords using a MD5 or a SHA-1 hash with
 a site-wide salt. If you are using this technique and someone ever sees your code, be prepared for an attack using rainbow tables.
-If somone has your SALT, then it might have all the passwords.
+If someone has your SALT, then it might have all the passwords.
 
     // Very bad idea!
     $hash = sha1( $salt . $password );

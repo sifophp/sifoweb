@@ -1,7 +1,7 @@
 Benchmark
 =========================
 
-The Benchmark Class allows you to measure the time passed between checks for any given PHP code. To make it work you only need to label the measurament with a a key and put the code in those places that mark the start or end of the benchmark:
+The Benchmark Class allows you to measure the time passed between checks for any given PHP code. To make it work you only need to label the measurement with a a key and put the code in those places that mark the start or end of the benchmark:
 
 Code example
 -------------
